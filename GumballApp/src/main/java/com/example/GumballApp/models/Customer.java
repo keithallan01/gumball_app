@@ -1,6 +1,10 @@
 package com.example.GumballApp.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="customers")
@@ -30,9 +34,13 @@ public class Customer {
     @Column(name="email_address")
     private String emailAddress;
 
+
     // TODO: JSON IGNOREPROPERTIES
-    // RELATIONSHIP
-    // private List<Listing>;
+    //
+    @JsonIgnoreProperties("customer")
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    private List<Listing> listings;
+
 
     public Customer(String firstName, String lastName,
                     String address, String town, String telephoneNumber,
@@ -43,6 +51,7 @@ public class Customer {
         this.town = town;
         this.telephoneNumber = telephoneNumber;
         this.emailAddress = emailAddress;
+        this.listings = new ArrayList<>();
     }
 
     public Customer(){
@@ -56,8 +65,6 @@ public class Customer {
     public void setId(Long id) {
         this.id = id;
     }
-
-
 
     public String getFirstName() {
         return firstName;
@@ -106,6 +113,20 @@ public class Customer {
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
+
+    public List<Listing> getListings() {
+        return listings;
+    }
+
+    public void setListings(List<Listing> listings) {
+        this.listings = listings;
+    }
+
+    public void addListing(Listing listing){
+        this.listings.add(listing);
+    }
+
+//    public void deleteListing
 }
 
 

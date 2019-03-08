@@ -1,17 +1,27 @@
 package com.example.GumballApp.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "listings")
 public class Listing {
 
+    @Id
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "item")
     private String item;
-
+    @Column(name = "description")
     private String description;
-
+    @Column(name = "category")
     private String category;
-
+    @Column(name = "asking_price")
     private double askingPrice;
 
     // TODO: JSON IGNOREPROPERTIES
     // RELATIONSHIP
+    @ManyToOne
+    @JoinColumn(name = "customer_id", nullable = false)
    private Customer customer;
 
     public Listing(String item, String description,
@@ -21,6 +31,17 @@ public class Listing {
         this.category = category;
         this.askingPrice = askingPrice;
         this.customer = customer;
+    }
+
+    public Listing(){
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getItem() {
@@ -62,4 +83,5 @@ public class Listing {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
+
 }
