@@ -12,6 +12,8 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 
+
+
 public class CustomerTest {
 
     private Customer customer1, customer2, customer3;
@@ -35,6 +37,6 @@ public class CustomerTest {
 
     @Test
     public void testCustomerHasEmail(){
-        assertEquals("Kevin",customer1.getEmailAddress());
+        assertEquals("keithAllan@yahoo.com",customer1.getEmailAddress());
     }
 }
