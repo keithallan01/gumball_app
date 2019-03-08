@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LstingContainer from './containers/ListingContainer'
+import CustomerContainer from './containers/CustomerContainer'
 import './App.css';
 
 class App extends Component {
@@ -6,6 +8,8 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Gumball Appp</h1>
+        <CustomerContainer/>
+        <LstingContainer/>
       </div>
     );
   }
