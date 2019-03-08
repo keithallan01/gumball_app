@@ -12,14 +12,15 @@ public class Listing {
 
     // TODO: JSON IGNOREPROPERTIES
     // RELATIONSHIP
-    // private Customer customer;
+   private Customer customer;
 
     public Listing(String item, String description,
-                   String category, double askingPrice) {
+                   String category, double askingPrice, Customer customer) {
         this.item = item;
         this.description = description;
         this.category = category;
         this.askingPrice = askingPrice;
+        this.customer = customer;
     }
 
     public String getItem() {
@@ -52,5 +53,13 @@ public class Listing {
 
     public void setAskingPrice(double askingPrice) {
         this.askingPrice = askingPrice;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }
