@@ -34,9 +34,9 @@ public class Customer {
     // RELATIONSHIP
     // private List<Listing>;
 
-    public Customer(String firstName, String lastName, String address, String town, String telephoneNumber, String emailAddress) {
-
-
+    public Customer(String firstName, String lastName,
+                    String address, String town, String telephoneNumber,
+                    String emailAddress) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
