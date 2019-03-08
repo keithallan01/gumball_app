@@ -2,22 +2,20 @@ import React from 'react';
 
 
 const DetailComponent = (props) => {
-    console.log(props.customersArr)
 
-    const customerDetail = props.customersArr.map((customer) => {
-        // console.log(props.customersArr)
+    const listingDetail = props.listingsArr.map((listing) => {
         return (
-            <div key={customer.id}>
-                <p>{customer.firstName} {" "} {customer.lastName}</p>
+            <div key={listing.id}>
+                <p>{listing.item}</p>
             </div>
         )
     })
 
     return (
         <div >
-            {customerDetail}
+            {listingDetail}
         </div>
     );
 }
- 
+
 export default DetailComponent;
