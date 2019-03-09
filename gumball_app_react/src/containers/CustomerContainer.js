@@ -1,7 +1,6 @@
-import React from 'react';
-import { Url } from 'url';
-import CustomerInfo from '../components/CustomerInfo';
-import SearchCoponent from '../components/SearchComponent';
+import React from "react";
+import CustomerInfo from "../components/CustomerInfo";
+import SearchComponent from '../components/SearchComponent';
 
 class CustomerContainer extends React.Component {
   constructor(props) {
@@ -15,6 +14,7 @@ class CustomerContainer extends React.Component {
     return (
       <div>
         <h1>Customers</h1>
+        <SearchComponent />
         <CustomerInfo
           customersArr={this.state.customers}
           onCustomerSubmit={this.handleNewCustomerSubmit}
@@ -58,6 +58,7 @@ class CustomerContainer extends React.Component {
       .catch(error => console.error("Error:", error));
   };
 
+  
   handleDeleteCustomer = data => {
     fetch("http://localhost:8080/customers/" + data, {
       method: "DELETE", // or 'PUT'
@@ -67,17 +68,6 @@ class CustomerContainer extends React.Component {
       }
     })
   };
-
-  render() {
-    return (
-      <div className="customers-container">
-        <h1>Customers</h1>
-        <SearchCoponent />
-        <CustomerInfo customersArr={this.state.customers} />
-      </div>
-    );
-  }
-
 }
 
 export default CustomerContainer;

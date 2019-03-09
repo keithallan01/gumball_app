@@ -20,21 +20,11 @@ class ListingContainer extends React.Component {
 
     render() { 
         return ( 
-<<<<<<< HEAD
             <div className="listing-container">
                 <h1>Listings</h1> 
                 <SearchComponent />
                 {/* <DetailComponent listingsArr={this.state.listings}/> */}
                 <ListingInfo listingsArr={this.state.listings}/>
-=======
-            <div>
-                <h1>Listing Container</h1> 
-                {/* <DetailComponent listingsArr={this.state.listings}/> */}
-                <ListingInfo listingsArr={this.state.listings}
-                    onListingSubmit={this.handleNewListingSubmit}
-                    onListingUpdate={this.handleUpdateListing}
-                    onListingDelete={this.handleDeleteListing}/>
->>>>>>> feature/listings_react_feature_continued
             </div>
             
         );
