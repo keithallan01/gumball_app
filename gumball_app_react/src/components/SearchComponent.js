@@ -3,7 +3,7 @@ import React from 'react'
 const SearchComponent = () => {
 
     return (
-       <form style={{ display: 'flex'}}>
+       <form>
            <input 
             type="text" 
             name="search" 
