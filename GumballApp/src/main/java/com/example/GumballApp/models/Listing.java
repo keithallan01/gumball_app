@@ -17,12 +17,15 @@ public class Listing {
     private String category;
     @Column(name = "asking_price")
     private double askingPrice;
+    @Column(name = "search_counter")
+    private Long searchCounter;
 
     // TODO: JSON IGNOREPROPERTIES
     // RELATIONSHIP
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
    private Customer customer;
+
 
     public Listing(String item, String description,
                    String category, double askingPrice, Customer customer) {
@@ -31,7 +34,19 @@ public class Listing {
         this.category = category;
         this.askingPrice = askingPrice;
         this.customer = customer;
+        this.searchCounter = 0L;
     }
+    public Long getSearchCounter() {
+        return searchCounter;
+    }
+    public void incrementSearchCounter() {
+        this.searchCounter++;
+    }
+
+    public void setSearchCounter(Long searchCouner) {
+        this.searchCounter = searchCounter;
+    }
+
 
     public Listing(){
     }
