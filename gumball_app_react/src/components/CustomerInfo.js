@@ -54,7 +54,7 @@ class CustomerInfo extends Component {
               <button className="btn-warning" onClick={this.handleEditCustomer.bind(this,customer.id, customer.firstName, customer.lastName, customer.address, customer.town, customer.telephoneNumber, customer.emailAddress)}>Edit</button>
             </td>
             <td>
-              <button className="btn-danger">Delete</button>
+              <button className="btn-danger" onClick={this.handleDeleteCustomer.bind(this, customer.id)} >Delete</button>
             </td>
           </tr>
         );
@@ -247,6 +247,11 @@ handleFirstNameChange= (e) =>{
         EditCustomerModel: ! this.state.EditCustomerModel
 
       })
+  }
+
+  handleDeleteCustomer = (id) => {
+    this.props.onCustomerDelete(id);
+
   }
 
 

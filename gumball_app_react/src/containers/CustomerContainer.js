@@ -5,11 +5,9 @@ class CustomerContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      customers: [],
+      customers: []
     };
   }
-
-  
 
   render() {
     return (
@@ -19,7 +17,7 @@ class CustomerContainer extends React.Component {
           customersArr={this.state.customers}
           onCustomerSubmit={this.handleNewCustomerSubmit}
           onCustomerUpdate={this.handleUpdateCustomer}
-
+          onCustomerDelete={this.handleDeleteCustomer}
         />
       </div>
     );
@@ -34,26 +32,38 @@ class CustomerContainer extends React.Component {
 
   handleNewCustomerSubmit = data => {
     fetch("http://localhost:8080/customers", {
-        method: 'POST', // or 'PUT'
-        body: JSON.stringify(data), // data can be `string` or {object}!
-        headers:{
-          'Content-Type': 'application/json'
-        }
-      }).then(res => res.json())
-      .then(response => console.log('Success:', JSON.stringify(response)))
-      .catch(error => console.error('Error:', error));
+      method: "POST", // or 'PUT'
+      body: JSON.stringify(data), // data can be `string` or {object}!
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(response => console.log("Success:", JSON.stringify(response)))
+      .catch(error => console.error("Error:", error));
   };
 
   handleUpdateCustomer = data => {
-    fetch("http://localhost:8080/customers/"+ data.id, {
-        method: 'PATCH', // or 'PUT'
-        body: JSON.stringify(data), // data can be `string` or {object}!
-        headers:{
-          'Content-Type': 'application/json'
-        }
-      }).then(res => res.json())
-      .then(response => console.log('Success:', JSON.stringify(response)))
-      .catch(error => console.error('Error:', error));
+    fetch("http://localhost:8080/customers/" + data.id, {
+      method: "PATCH", // or 'PUT'
+      body: JSON.stringify(data), // data can be `string` or {object}!
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(response => console.log("Success:", JSON.stringify(response)))
+      .catch(error => console.error("Error:", error));
+  };
+
+  handleDeleteCustomer = data => {
+    fetch("http://localhost:8080/customers/" + data, {
+      method: "DELETE", // or 'PUT'
+      body: JSON.stringify(data), // data can be `string` or {object}!
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
   };
 }
 
