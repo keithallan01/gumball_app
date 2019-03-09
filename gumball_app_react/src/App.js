@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import LstingContainer from './containers/ListingContainer'
+import ListingContainer from './containers/ListingContainer'
 import CustomerContainer from './containers/CustomerContainer'
 import './App.css';
 import Header from './components/Layout/Header'
-import SearchComponent from './components/SearchComponent'
 
 class App extends Component {
   render() {
@@ -12,7 +11,7 @@ class App extends Component {
         {/* <h1>Gumball App</h1> */}
         <Header />
         <CustomerContainer />
-        <LstingContainer />
+        <ListingContainer />
       </div>
     );
   }
