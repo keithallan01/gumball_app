@@ -1,5 +1,6 @@
 import React from 'react';
 import DetailComponent from '../components/DetailComponent';
+import ListingInfo from '../components/ListingInfo';
 
 class ListingContainer extends React.Component {
     constructor(props) {
@@ -21,6 +22,7 @@ class ListingContainer extends React.Component {
             <div>
                 <h1>Listing Container</h1> 
                 <DetailComponent listingsArr={this.state.listings}/>
+                <ListingInfo listingsArr={this.state.listings}/>
             </div>
             
         );
