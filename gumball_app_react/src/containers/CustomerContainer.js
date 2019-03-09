@@ -56,6 +56,7 @@ class CustomerContainer extends React.Component {
       .catch(error => console.error("Error:", error));
   };
 
+  
   handleDeleteCustomer = data => {
     fetch("http://localhost:8080/customers/" + data, {
       method: "DELETE", // or 'PUT'
