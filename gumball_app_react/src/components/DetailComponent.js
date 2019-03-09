@@ -1,12 +1,12 @@
 import React from "react";
 
 const DetailComponent = props => {
-  const listingDetail = props.listingsArr.map(listing => {
-    return <div key={listing.id}>{listing.item}</div>;
-  });
+//   const listingDetail = props.listingsArr.map(listing => {
+//     return <div key={listing.id}>{listing.item}</div>;
+//   });
 
-  return <div>{listingDetail}</div>;
-};
+//   return <div>{listingDetail}</div>;
+// };
 
     const listingDetail = props.listingsArr.map((listing) => {
         return (
