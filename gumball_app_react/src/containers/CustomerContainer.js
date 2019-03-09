@@ -45,7 +45,6 @@ class CustomerContainer extends React.Component {
   };
 
   handleUpdateCustomer = data => {
-      console.log(data.id)
     fetch("http://localhost:8080/customers/"+ data.id, {
         method: 'PATCH', // or 'PUT'
         body: JSON.stringify(data), // data can be `string` or {object}!
