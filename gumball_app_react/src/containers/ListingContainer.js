@@ -1,5 +1,6 @@
 import React from 'react';
 import DetailComponent from '../components/DetailComponent';
+import SearchComponent from '../components/SearchComponent';
 
 class ListingContainer extends React.Component {
     constructor(props) {
@@ -18,8 +19,9 @@ class ListingContainer extends React.Component {
 
     render() { 
         return ( 
-            <div>
-                <h1>Listing Container</h1> 
+            <div className="listing-container">
+                <h1>Listings</h1> 
+                <SearchComponent />
                 <DetailComponent listingsArr={this.state.listings}/>
             </div>
             
