@@ -25,4 +25,9 @@ public class ListingController {
     public List<Listing> getAllListingsFromTown(@PathVariable String town){
         return listingRepository.getAllListingsFromTown(town);
     }
+
+    @GetMapping(value = "/customer/{customerId}")
+    public List<Listing> getListingsByCustomerId(@PathVariable Long customerId) {
+        return listingRepository.getListingsByCustomerId(customerId);
+    }
 }
