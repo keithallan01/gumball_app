@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ListingBoxComponet from '../components/dashboardComponents/ListingBoxComponet'
 
 class DashboardContainer extends Component {
     constructor(props) {
@@ -7,7 +8,10 @@ class DashboardContainer extends Component {
     }
     render() { 
         return ( 
+            <div>
             <h1>Dashboard Container</h1>
+            <ListingBoxComponet/> 
+            </div>
          );
     }
 }
