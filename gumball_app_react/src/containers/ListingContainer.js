@@ -1,5 +1,5 @@
 import React from 'react';
-import ListingInfo from '../components/ListingInfo';
+import ListingInfo from '../components/listingComponets/ListingInfo';
 
 class ListingContainer extends React.Component {
     constructor(props) {

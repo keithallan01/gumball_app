@@ -1,5 +1,5 @@
 import React from "react";
-import CustomerInfo from "../components/CustomerInfo";
+import CustomerInfo from "../components/customerComponets/CustomerInfo";
 
 class CustomerContainer extends React.Component {
   constructor(props) {

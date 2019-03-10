@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-class Home extends Component {
+class DashboardContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
     }
     render() { 
         return ( 
-            <h1>Home</h1>
+            <h1>Dashboard Container</h1>
          );
     }
 }
  
-export default Home;
+export default DashboardContainer;

@@ -5,9 +5,10 @@ body {
 }
 
 .navbar{
+    font-family: 'Molengo', Georgia, Times, serif;
     overflow: hidden;
-    background: #080;
-    color: #fff;
+    background: #F8F9FA;
+    color: #212528;
 }
 
 .nav_ontainer{
@@ -15,23 +16,34 @@ body {
     margin: auto;
 }
 .logo{
-    font-size: 25px;
-    width: 80%;
+    font-size: 35px;
     float: left;
     display: block;
-    margin: 10px 0;
-    color: #fff;
+    /* margin: 10px 0; */
+    color: #212528;
 }
 ul{
-    width: 10%;
-    float: left;
+    /* width: 10%; */
+    float: right;
     padding: 0;
-    padding-top: 40px;
+    padding-top: 30px;
     text-align: right;
 }
 
 ul a{
     text-decoration: none;
-    color: #fff;
+    color: #6B757D;
     margin: 0 20px;
 }
+
+/* h1 {
+    font-family: 'Molengo', Georgia, Times, serif;
+    font-size: 56px;
+    line-height: 80px;
+   }
+    
+   p {
+    font-family: 'Lekton', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+   } */

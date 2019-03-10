@@ -1,5 +1,5 @@
-import React from "react";
-import {Link, NavLink} from 'react-router-dom';
+import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -9,7 +9,8 @@ const NavBar = () => {
           Logo
         </a>
         <ul>
-          <NavLink exact to="/">Home</NavLink>
+          <NavLink  exact to="/">Dashboard</NavLink>
+          <NavLink exact to="/PostanAd">Post an Ad</NavLink>
           <NavLink to="/customer">Customer</NavLink>
         </ul>
       </div>
