@@ -1,6 +1,7 @@
-package com.example.GumballApp.repositories;
+package com.example.GumballApp.repositories.ListingRepository;
 
 import com.example.GumballApp.models.Listing;
+import com.example.GumballApp.repositories.ListingRepository.ListingRepositoryCustom;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -16,7 +17,7 @@ public class ListingRepositoryImpl implements ListingRepositoryCustom {
     EntityManager entityManager;
 
     @Transactional
-    public List<Listing> getAllListingsFromTown(String town){
+    public List<Listing> findListingsByTown(String town){
         List<Listing> results = null;
         Session session = entityManager.unwrap(Session.class);
         try {
