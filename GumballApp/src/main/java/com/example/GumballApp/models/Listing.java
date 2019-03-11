@@ -9,19 +9,25 @@ public class Listing {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "item")
     private String item;
+
     @Column(name = "description")
     private String description;
+
     @Column(name = "category")
     private String category;
+
     @Column(name = "asking_price")
     private double askingPrice;
+
     @Column(name = "search_counter")
     private Long searchCounter;
 
-    // TODO: JSON IGNOREPROPERTIES
-    // RELATIONSHIP
+    @Column(name = "image")
+    private String image;
+
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
    private Customer customer;
@@ -35,6 +41,7 @@ public class Listing {
         this.askingPrice = askingPrice;
         this.customer = customer;
         this.searchCounter = 0L;
+        this.image = image;
     }
     public Long getSearchCounter() {
         return searchCounter;
@@ -99,4 +106,11 @@ public class Listing {
         this.customer = customer;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }
