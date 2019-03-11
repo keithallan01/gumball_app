@@ -1,11 +1,12 @@
 import React from "react";
-import CustomerInfo from "../components/customerComponets/CustomerInfo";
+import CustomerTable from "../components/customerComponets/CustomerTable";
+import AddCustomerForm from "../components/customerComponets/AddCustomerForm";
 
 class CustomerContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      customers: []
+      customers: [],
     };
   }
 
@@ -13,9 +14,11 @@ class CustomerContainer extends React.Component {
     return (
       <div>
         <h1>Customers</h1>
-        <CustomerInfo
-          customersArr={this.state.customers}
+        <AddCustomerForm
           onCustomerSubmit={this.handleNewCustomerSubmit}
+        />
+        <CustomerTable
+          customersArr={this.state.customers}
           onCustomerUpdate={this.handleUpdateCustomer}
           onCustomerDelete={this.handleDeleteCustomer}
         />
@@ -39,8 +42,10 @@ class CustomerContainer extends React.Component {
       }
     })
       .then(res => res.json())
-      .then(response => console.log("Success:", JSON.stringify(response)))
-      .catch(error => console.error("Error:", error));
+      .then(response => fetch("http://localhost:8080/customers")
+        .then(res => res.json())
+        .then(data => this.setState({ customers: data._embedded.customers })))
+        .catch(error => console.error("Error:", error));
   };
 
   handleUpdateCustomer = data => {
@@ -51,13 +56,16 @@ class CustomerContainer extends React.Component {
         "Content-Type": "application/json"
       }
     })
+    .then(res => res.json())
+    .then(response => fetch("http://localhost:8080/customers")
       .then(res => res.json())
-      .then(response => console.log("Success:", JSON.stringify(response)))
+      .then(data => this.setState({ customers: data._embedded.customers })))
       .catch(error => console.error("Error:", error));
   };
 
-  
+
   handleDeleteCustomer = data => {
+    console.log('delete function called')
     fetch("http://localhost:8080/customers/" + data, {
       method: "DELETE", // or 'PUT'
       body: JSON.stringify(data), // data can be `string` or {object}!
@@ -65,7 +73,14 @@ class CustomerContainer extends React.Component {
         "Content-Type": "application/json"
       }
     })
+    .then(res => res.text())
+    .then(res => fetch("http://localhost:8080/customers")
+    .then(res => res.json())
+    .then(data => this.setState({ customers: data._embedded.customers })))
+    .catch(error => console.error("Error:", error));
+
   };
+
 }
 
 export default CustomerContainer;
