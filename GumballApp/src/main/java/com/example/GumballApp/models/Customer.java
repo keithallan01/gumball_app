@@ -38,7 +38,10 @@ public class Customer {
     // TODO: JSON IGNOREPROPERTIES
     //
     @JsonIgnoreProperties("customer")
-    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+//    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+
+
     private List<Listing> listings;
 
 
