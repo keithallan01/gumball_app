@@ -68,7 +68,8 @@ public void run(ApplicationArguments args) {
 
     Listing listing1 = new Listing("bike", "boneshaker",
             "Sports & Leisure", 35.00, customer1);
-             listing1.setSearchCounter(500L);
+    listing1.setSearchCounter(500L);
+    listing1.setImage("https://www.featurepics.com/StockImage/20081008/old-bike-stock-picture-924047.jpg");
     listingRepository.save(listing1);
 
 
