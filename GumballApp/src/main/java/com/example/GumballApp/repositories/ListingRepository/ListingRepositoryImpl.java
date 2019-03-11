@@ -17,7 +17,7 @@ public class ListingRepositoryImpl implements ListingRepositoryCustom {
     EntityManager entityManager;
 
     @Transactional
-    public List<Listing> getAllListingsFromTown(String town){
+    public List<Listing> findListingsByTown(String town){
         List<Listing> results = null;
         Session session = entityManager.unwrap(Session.class);
         try {

@@ -23,7 +23,7 @@ public class ListingController {
 
     @GetMapping(value = "/town/{town}")
     public List<Listing> getAllListingsFromTown(@PathVariable String town){
-        return listingRepository.getAllListingsFromTown(town);
+        return listingRepository.findListingsByTown(town);
     }
 
     @GetMapping(value = "/customer/{customerId}")

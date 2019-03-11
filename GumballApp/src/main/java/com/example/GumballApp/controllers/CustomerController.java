@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/Customers")
 
 public class CustomerController {
+
     @Autowired
     ListingRepository listingRepository;
+
     @Autowired
     CustomerRepository customerRepository;
 
