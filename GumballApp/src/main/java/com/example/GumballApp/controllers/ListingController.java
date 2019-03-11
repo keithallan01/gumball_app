@@ -30,4 +30,6 @@ public class ListingController {
     public List<Listing> getListingsByCustomerId(@PathVariable Long customerId) {
         return listingRepository.getListingsByCustomerId(customerId);
     }
+
+    
 }
