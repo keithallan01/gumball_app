@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Card, CardText, CardBody, CardLink,
-  CardTitle } from 'reactstrap';
-import faker from 'faker';   
+import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
+import faker from 'faker'; 
 
-
-const CardListingComponet = () => {
-    return ( <div className="cardlisting container">
+const CardTopHotComponet = () => {
+    return ( 
+        <div className="cardlisting container">
         <Card >
         <img width="100%" src={faker.image.avatar()} alt="Card image cap" />
         <CardBody>
@@ -14,7 +13,7 @@ const CardListingComponet = () => {
         </CardBody>
         </Card>
       </div> 
-      );
+     );
 }
  
-export default CardListingComponet;
+export default CardTopHotComponet;

@@ -1,20 +1,26 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import logo from '../logo.png'
 
 const NavBar = () => {
   return (
-    <div className="navbar">
-      <div className="nav_ontainer">
-        <a className="logo" href="/">
-          Logo
-        </a>
-        <ul>
-          <NavLink  exact to="/">Dashboard</NavLink>
-          <NavLink exact to="/PostanAd">Post an Ad</NavLink>
-          <NavLink to="/customer">Customer</NavLink>
+    <nav>
+      <div className="nav_container">
+        <img className="logo" src={logo}>
+    
+        </img>
+
+        <ul className="main-nav">
+         <NavLink exact to="/">
+            Dashboard
+          </NavLink> 
+          <NavLink className="li" to="/PostanAd">
+            Post an Ad
+          </NavLink>
+          <NavLink className="li" to="/customer">Customer</NavLink>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 

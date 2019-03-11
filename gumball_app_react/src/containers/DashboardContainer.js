@@ -1,19 +1,24 @@
-import React, { Component } from 'react';
-import ListingBoxComponet from '../components/dashboardComponents/ListingBoxComponet'
+import React, { Component } from "react";
+import TopListingBoxComponet from "../components/dashboardComponents/TopListingBoxComponet";
+import ListingBoxComponet from "../components/dashboardComponents/ListingBoxComponet";
 
 class DashboardContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
-    render() { 
-        return ( 
-            <div>
-            <h1>Dashboard Container</h1>
-            <ListingBoxComponet/> 
-            </div>
-         );
-    }
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <div>
+        <div>
+          <TopListingBoxComponet />
+        </div>
+        <div>
+          <ListingBoxComponet />
+        </div>
+      </div>
+    );
+  }
 }
- 
+
 export default DashboardContainer;

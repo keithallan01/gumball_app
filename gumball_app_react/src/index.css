@@ -1,32 +1,130 @@
 body {
     margin: 0;
     padding: 0;
-    font-family:sans-serif;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+
 }
 
-.navbar{
-    font-family: 'Molengo', Georgia, Times, serif;
-    overflow: hidden;
-    background: #F8F9FA;
-    color: #212528;
+/* ----------------------- HEADINGS ---------------------- */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
-.nav_ontainer{
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 150%;
+    word-spacing: 2px;
+    /* text-align: center; */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2::after {
+    display: block;
+    height: 2px;
+    background-color: #ffce2e;
+    content: " ";
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+    
+    /*-------------------------------- Navbar ---------------------------------*/
+
+    nav{
+        overflow: hidden;
+        background: #F8F9FA;
+        color: #212528;
+    }
+
+    .logo{
+        float: left;
+        display: block;
+        max-width:100px;
+        height:auto;
+    }
+
+    .main-nav {
+        float: right;
+        list-style: none;
+        margin-top: 50px;
+        font-weight: bold;
+    }
+    
+    
+    .main-nav a:link,
+    .main-nav a:visited {
+        padding: 8px 0;
+        color: #4A3B08;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 90%;
+        border-bottom: 2px solid transparent;
+        -webkit-transition: border-bottom 0.2s;
+        transition: border-bottom 0.2s;
+    }
+    
+    .main-nav a:hover,
+    .main-nav a:active {
+        border-bottom: 3px solid #ffce2e;
+    }
+    
+
+.nav_container{
     width: 80%;
     margin: auto;
 }
-.logo{
-    font-size: 35px;
-    float: left;
-    display: block;
-    /* margin: 10px 0; */
-    color: #212528;
+
+
+
+/* ----- LINKS ----- */
+
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
 }
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+
+    /*-------------------------------- Card ---------------------------------*/
+    
 ul{
-    /* width: 10%; */
     float: right;
     padding: 0;
-    padding-top: 30px;
+    padding-top: 0px;
     text-align: right;
 }
 
@@ -39,20 +137,15 @@ ul a{
 .container ul li{
     list-style: none;
     float: left;
-    width: 25%;
-    height: 350px;
+    width: 22%;
+    height: 400px;
 }
 
-/* h1 {
-    font-family: 'Molengo', Georgia, Times, serif;
-    font-size: 56px;
-    line-height: 80px;
-   }
-    
-   p {
-    font-family: 'Lekton', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 25px;
-   } */
-   
+.para-top-listing{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
 
+}
+    
+   
