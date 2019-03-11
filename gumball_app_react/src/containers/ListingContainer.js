@@ -1,6 +1,6 @@
 import React from 'react';
 import DetailComponent from '../components/DetailComponent';
-import SearchComponent from '../components/SearchComponent';
+import ListingSearchComponent from '../components/searchComponents/ListingSearchComponent';
 import ListingInfo from '../components/ListingInfo';
 
 class ListingContainer extends React.Component {
@@ -22,7 +22,7 @@ class ListingContainer extends React.Component {
     return (
       <div className="listing-container">
         <h1>Listings</h1>
-        <SearchComponent />
+        <ListingSearchComponent listings={this.state.listings} />
         {/* <DetailComponent listingsArr={this.state.listings}/> */}
         <ListingInfo
           listingsArr={this.state.listings}
