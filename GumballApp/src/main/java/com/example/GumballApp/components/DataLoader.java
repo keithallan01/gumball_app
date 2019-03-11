@@ -2,8 +2,8 @@ package com.example.GumballApp.components;
 
 import com.example.GumballApp.models.Customer;
 import com.example.GumballApp.models.Listing;
-import com.example.GumballApp.repositories.CustomerRepository;
-import com.example.GumballApp.repositories.ListingRepository;
+import com.example.GumballApp.repositories.CustomerRepository.CustomerRepository;
+import com.example.GumballApp.repositories.ListingRepository.ListingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

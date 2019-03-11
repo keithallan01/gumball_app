@@ -1,4 +1,4 @@
-package com.example.GumballApp.repositories;
+package com.example.GumballApp.repositories.ListingRepository;
 
 import com.example.GumballApp.models.Listing;
 

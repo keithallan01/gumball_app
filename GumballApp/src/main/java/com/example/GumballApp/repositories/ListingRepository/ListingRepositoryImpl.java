@@ -1,6 +1,7 @@
-package com.example.GumballApp.repositories;
+package com.example.GumballApp.repositories.ListingRepository;
 
 import com.example.GumballApp.models.Listing;
+import com.example.GumballApp.repositories.ListingRepository.ListingRepositoryCustom;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
