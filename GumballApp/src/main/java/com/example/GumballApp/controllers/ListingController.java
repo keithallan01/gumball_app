@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/Listings")
+@RequestMapping(value = "/listings")
 public class ListingController {
 
     @Autowired
@@ -31,5 +31,9 @@ public class ListingController {
         return listingRepository.getListingsByCustomerId(customerId);
     }
 
-    
+    @GetMapping(value = "/category/{category}")
+    public List<Listing> findListingsByCategory(@PathVariable String category){
+        return listingRepository.findListingsByCategory(category);
+    }
+
 }
