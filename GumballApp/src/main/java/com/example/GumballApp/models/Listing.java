@@ -1,5 +1,7 @@
 package com.example.GumballApp.models;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.persistence.*;
 
 @Entity
@@ -23,7 +25,8 @@ public class Listing {
     private double askingPrice;
 
     @Column(name = "search_counter")
-    private Long searchCounter;
+    @Value("${default.searchCounter")
+    private long searchCounter;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
@@ -46,7 +49,7 @@ public class Listing {
         this.searchCounter++;
     }
 
-    public void setSearchCounter(Long searchCounter) {
+    public void setSearchCounter(long searchCounter) {
         this.searchCounter = searchCounter;
     }
 
