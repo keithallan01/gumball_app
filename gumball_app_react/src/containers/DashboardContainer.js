@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import TopListingBoxComponet from "../components/dashboardComponents/TopListingBoxComponet";
 import ListingBoxComponet from "../components/dashboardComponents/ListingBoxComponet";
-
 class DashboardContainer extends Component {
   constructor(props) {
     super(props);
@@ -10,15 +9,11 @@ class DashboardContainer extends Component {
   render() {
     return (
       <div>
-        <div>
-          <TopListingBoxComponet />
-        </div>
-        <div>
+          <TopListingBoxComponet/>
           <ListingBoxComponet />
-        </div>
       </div>
     );
   }
-}
+} 
 
 export default DashboardContainer;

@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
-import { Card, CardText, CardBody, CardTitle } from 'reactstrap';
-import faker from 'faker'; 
+import React from "react";
+import faker from "faker";
 
 const CardTopHotComponet = () => {
-    return ( 
-        <div className="cardlisting container">
-        <Card >
-        <img width="100%" src={faker.image.avatar()} alt="Card image cap" />
-        <CardBody>
-          <CardText>Some quick example text to build on the </CardText>
-          <CardTitle>Card title</CardTitle>
-        </CardBody>
-        </Card>
-      </div> 
-     );
-}
- 
+  return (
+    <div className="card-top">
+      <img width="100%" src={faker.image.avatar()} alt="Card cap" />
+      <div className="container">
+        <p>Architect & Engineer</p>
+        <h3>
+          <b>£40.0</b>
+        </h3>
+      </div>
+    </div>
+  );
+};
+
 export default CardTopHotComponet;

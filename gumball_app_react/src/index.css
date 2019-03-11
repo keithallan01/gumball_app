@@ -1,151 +1,181 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', 'Arial', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    text-rendering: optimizeLegibility;
-    overflow-x: hidden;
-
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 /* ----------------------- HEADINGS ---------------------- */
 h1,
 h2,
 h3 {
-    font-weight: 300;
-    text-transform: uppercase;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 h1 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 240%;
-    word-spacing: 4px;
-    letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 150%;
-    word-spacing: 2px;
-    /* text-align: center; */
-    margin-bottom: 20px;
-    margin-top: 20px;
-    letter-spacing: 1px;
+  font-size: 150%;
+  word-spacing: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 40px;
+  letter-spacing: 1px;
 }
 
 h3 {
-    font-size: 110%;
-    margin-bottom: 15px;
+  font-size: 110%;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
 h2::after {
-    display: block;
-    height: 2px;
-    background-color: #ffce2e;
-    content: " ";
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 5px;
+  display: block;
+  height: 4px;
+  background-color: #ffce2e;
+  content: " ";
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 5px;
 }
 
-    
-    /*-------------------------------- Navbar ---------------------------------*/
+/*-------------------------------- Navbar ---------------------------------*/
 
-    nav{
-        overflow: hidden;
-        background: #F8F9FA;
-        color: #212528;
-    }
+nav {
+  overflow: hidden;
+  background: #f8f9fa;
+  color: #212528;
+}
 
-    .logo{
-        float: left;
-        display: block;
-        max-width:100px;
-        height:auto;
-    }
+.main-nav a {
+  text-decoration: none;
+  margin: 0 20px;
+}
 
-    .main-nav {
-        float: right;
-        list-style: none;
-        margin-top: 50px;
-        font-weight: bold;
-    }
-    
-    
-    .main-nav a:link,
-    .main-nav a:visited {
-        padding: 8px 0;
-        color: #4A3B08;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 90%;
-        border-bottom: 2px solid transparent;
-        -webkit-transition: border-bottom 0.2s;
-        transition: border-bottom 0.2s;
-    }
-    
-    .main-nav a:hover,
-    .main-nav a:active {
-        border-bottom: 3px solid #ffce2e;
-    }
-    
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 50px;
+  font-weight: bold;
+}
 
-.nav_container{
-    width: 80%;
-    margin: auto;
+.logo {
+  float: left;
+  display: block;
+  max-width: 100px;
+  height: auto;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+  padding: 8px 0;
+  color: #4a3b08;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+  border-bottom: 4px solid #ffce2e;
+}
+
+.nav_container {
+  width: 80%;
+  margin: auto;
+}
+
+/*-------------------------------- Card ---------------------------------*/
+
+/* ------------------------ Card Listing ---------------------------------*/
+
+
+
+.listing-box ul{
+  list-style: none;
+ 
+}
+
+.listing-box li{
+  width: 85%;
+  margin-top: 20px;
+  margin-left: 30px;
+
+}
+
+.listing-box img{
+  width: 150px;
+}
+
+.card-listing{
+  display:flex;
+  padding: 10px;
+  border: 1px solid #ffce2e;
+}
+
+.card-detail{
+  padding-left: 40px;
+  width: 100%;
+}
+
+.price-location{
+  display:flex;
+  padding-top: 25px;
+
+}
+
+.loction{
+  margin: 0 auto;
+  height:100%;
+  float: right;
+}
+
+.price{
+  float: left;
+  display: block;
+}
+/* ------------------------ Card top ---------------------------------*/
+
+.top-listing ul{
+  height: 380px;
 }
 
 
-
-/* ----- LINKS ----- */
-
-a:link,
-a:visited {
-    color: #e67e22;
-    text-decoration: none;
-    padding-bottom: 1px;
-    border-bottom: 1px solid #e67e22;
-    -webkit-transition: border-bottom 0.2s, color 0.2s;
-    transition: border-bottom 0.2s, color 0.2s;
+.top-listing li {
+  list-style: none;
+  float: left;
+  width: 20%;
+  height: 350px;
+  margin: 0 10px;
 }
 
-a:hover,
-a:active {
-    color: #555;
-    border-bottom: 1px solid transparent;
+.card-listing, .card-top {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
-
-
-    /*-------------------------------- Card ---------------------------------*/
-    
-ul{
-    float: right;
-    padding: 0;
-    padding-top: 0px;
-    text-align: right;
+/* On mouse-over, add a deeper shadow */
+.card-listing, .card-top:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-ul a{
-    text-decoration: none;
-    color: #6B757D;
-    margin: 0 20px;
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
 }
 
-.container ul li{
-    list-style: none;
-    float: left;
-    width: 22%;
-    height: 400px;
-}
-
-.para-top-listing{
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-size: 20px;
-
-}
-    
-   

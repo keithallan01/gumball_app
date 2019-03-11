@@ -1,18 +1,26 @@
-import React, { Component } from 'react';
-import CardTopHotComponet from './CardTopListingComponet'
+import React from "react";
+import CardTopHotComponet from "./CardTopListingComponet";
 
 const TopListingBoxComponet = () => {
-    return (  
-           <div className="container">
-           <h2>Top picks</h2>
-           <ul className="ul-card">
-            <li className="li-card"> <CardTopHotComponet /></li>
-            <li className="li-card"> <CardTopHotComponet /></li>
-            <li className="li-card"> <CardTopHotComponet /></li>
-            <li className="li-card"> <CardTopHotComponet /></li>
-           </ul>
-         </div>
-    );
-}
- 
+  return (
+    <div className="top-listing">
+      <h2>Top picks</h2>
+      <ul >
+        <li>
+          <CardTopHotComponet />
+        </li>
+        <li>
+          <CardTopHotComponet />
+        </li>
+        <li>
+          <CardTopHotComponet />
+        </li>
+        <li>
+          <CardTopHotComponet />
+        </li>
+      </ul>
+    </div>
+  );
+};
+
 export default TopListingBoxComponet;
