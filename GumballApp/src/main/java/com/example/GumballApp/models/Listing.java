@@ -43,7 +43,7 @@ public class Listing {
         this.searchCounter++;
     }
 
-    public void setSearchCounter(Long searchCouner) {
+    public void setSearchCounter(Long searchCounter) {
         this.searchCounter = searchCounter;
     }
 
