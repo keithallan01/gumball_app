@@ -24,7 +24,7 @@ public class ListingTest {
 
 
         listing2 = new Listing("cooker", "aga",
-                                   "Kitchenware", 100.00, customer1);
+                "Kitchenware", 100.00, customer1);
     }
 
     @Test
