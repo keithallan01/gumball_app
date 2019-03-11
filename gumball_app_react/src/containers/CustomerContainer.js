@@ -11,10 +11,11 @@ class CustomerContainer extends React.Component {
   }
 
   render() {
+    // console.log(this.state.customers)
     return (
       <div>
         <h1>Customers</h1>
-        <SearchComponent />
+        <SearchComponent customers={this.state.customers}/>
         <CustomerInfo
           customersArr={this.state.customers}
           onCustomerSubmit={this.handleNewCustomerSubmit}
