@@ -1,6 +1,6 @@
 import React from "react";
 import CustomerInfo from "../components/CustomerInfo";
-import SearchComponent from '../components/SearchComponent';
+import CustomerSearchComponent from '../components/searchComponents/CustomerSearchComponent';
 
 class CustomerContainer extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class CustomerContainer extends React.Component {
     return (
       <div>
         <h1>Customers</h1>
-        <SearchComponent customers={this.state.customers}/>
+        <CustomerSearchComponent customers={this.state.customers}/>
         <CustomerInfo
           customersArr={this.state.customers}
           onCustomerSubmit={this.handleNewCustomerSubmit}
