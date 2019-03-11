@@ -27,8 +27,8 @@ public class ListingController {
     }
 
     @GetMapping(value = "/customer/{customerId}")
-    public List<Listing> getListingsByCustomerId(@PathVariable Long customerId) {
-        return listingRepository.getListingsByCustomerId(customerId);
+    public List<Listing> findListingsByCustomerId(@PathVariable Long customerId) {
+        return listingRepository.findListingsByCustomerId(customerId);
     }
 
     @GetMapping(value = "/category/{category}")
