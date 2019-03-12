@@ -131,7 +131,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing12 = new Listing("cooker", "aga",
-            "Kitchenware", 100.00, customer1);
+            "Kitchenware", 120.00, customer1);
     listing12.setSearchCounter(235L);
     listingRepository.save(listing12);
     Listing listing13 = new Listing("bike", "boneshaker",
@@ -141,7 +141,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing14= new Listing("cooker", "aga",
-            "Kitchenware", 100.00, customer1);
+            "Kitchenware", 105.00, customer1);
     listing14.setSearchCounter(111L);
     listingRepository.save(listing14);
 
@@ -152,7 +152,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing16 = new Listing("cooker", "aga",
-            "Kitchenware", 100.00, customer1);
+            "Kitchenware", 125.00, customer1);
     listing16.setSearchCounter(351L);
     listingRepository.save(listing16);
 
@@ -162,7 +162,7 @@ public void run(ApplicationArguments args) {
     listingRepository.save(listing17);
 
     Listing listing18= new Listing("cooker", "aga",
-            "Kitchenware", 100.00, customer1);
+            "Kitchenware", 200.00, customer1);
     listing18.setSearchCounter(539L);
     listingRepository.save(listing18);
 
@@ -185,7 +185,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing22 = new Listing("cooker", "aga",
-            "Kitchenware", 100.00, customer1);
+            "Kitchenware", 135.00, customer1);
     listing22.setSearchCounter(567L);
     listingRepository.save(listing22);
 
@@ -224,7 +224,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing30 = new Listing("cooker", "aga",
-            "Kitchenware", 100.00, customer6);
+            "Kitchenware", 150.00, customer6);
     listingRepository.save(listing30);
 
     Listing listing31 = new Listing("bike", "boneshaker",
@@ -233,7 +233,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing32 = new Listing("cooker", "aga",
-            "Kitchenware", 100.00, customer4);
+            "Kitchenware", 155.00, customer4);
     listingRepository.save(listing32);
     Listing listing33 = new Listing("bike", "boneshaker",
             "Sports & Leisure", 105.00, customer7);
@@ -250,7 +250,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing36 = new Listing("cooker", "aga",
-            "Kitchenware", 100.00, customer3);
+            "Kitchenware", 90.00, customer3);
     listingRepository.save(listing36);
 
     Listing listing37 = new Listing("bike", "boneshaker",
@@ -268,7 +268,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing40 = new Listing("cooker", "Hotpoint",
-            "Kitchenware", 90.00, customer1);
+            "Kitchenware", 95.00, customer1);
     listingRepository.save(listing40);
 
     Listing listing41 = new Listing("bike", "Mountain",

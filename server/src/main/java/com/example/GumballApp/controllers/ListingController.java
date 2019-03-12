@@ -27,15 +27,38 @@ public class ListingController {
     }
 
     @GetMapping(value = "/customer/{customerId}")
-    public List<Listing> findListingsByCustomerIdOrderByItemAsc(@PathVariable Long customerId) {
-//        return listingRepository.findListingsByCustomerId(customerId);
-        return listingRepository.findListingsByCustomerIdOrderByItemAsc(customerId);
+    public List<Listing> findListingsByCustomerId(@PathVariable Long customerId) {
+        return listingRepository.findListingsByCustomerId(customerId);
     }
 
     @GetMapping(value = "/category/{category}")
     public List<Listing> findListingsByCategory(@PathVariable String category){
         return listingRepository.findListingsByCategory(category);
     }
+
+
+    //ADDITIONAL QUERIES - OPTIONAL
+    @GetMapping(value = "/item/low-high/{item}")
+    public List<Listing> findListingsByItemOrderByAskingPriceAsc(@PathVariable  String item){
+        return listingRepository.findListingsByItemOrderByAskingPriceAsc(item);
+    }
+
+    @GetMapping(value = "/item/high-low/{item}")
+    public List<Listing> findListingsByItemOrderByAskingPriceDesc(@PathVariable  String item){
+        return listingRepository.findListingsByItemOrderByAskingPriceDesc(item);
+    }
+
+    @GetMapping(value = "/category/item/a-z/{category}")
+    public List<Listing> findListingsByCategoryOrderByItemAsc(@PathVariable  String category){
+        return listingRepository.findListingsByCategoryOrderByItemAsc(category);
+    }
+
+    @GetMapping(value = "/category/item/z-a/{item}")
+    public List<Listing> findListingsByCategoryOrderByItemDesc(@PathVariable  String category){
+        return listingRepository.findListingsByCategoryOrderByItemDesc(category);
+    }
+
+
 
 }
 
