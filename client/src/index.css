@@ -151,15 +151,14 @@ nav {
 /* ------------------------ Card top ---------------------------------*/
 
 .top-listing ul{
-  height: 380px;
+  height: 240px;
 }
-
 
 .top-listing li {
   list-style: none;
   float: left;
-  width: 20%;
-  height: 350px;
+  width: 15%;
+  height: 240px;
   margin: 0 10px;
 }
 

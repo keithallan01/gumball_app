@@ -6,10 +6,9 @@ const CardTopListing = () => {
     <div className="card-top">
       <img width="100%" src={faker.image.avatar()} alt="Card cap" />
       <div className="container">
-        <p>Architect & Engineer</p>
-        <h3>
+        <h5>
           <b>£40.0</b>
-        </h3>
+        </h5>
       </div>
     </div>
   );

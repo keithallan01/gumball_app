@@ -1,23 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from '../logo.png'
+import logo from "../logo.png";
 
 const NavBar = () => {
   return (
     <nav>
       <div className="nav_container">
-        <img className="logo" src={logo} alt="logo">
-    
-        </img>
-
+        <NavLink exact to="/">
+          <img className="logo" src={logo} alt="logo" />
+        </NavLink>
         <ul className="main-nav">
-         <NavLink exact to="/">
-            Dashboard
-          </NavLink> 
           <NavLink className="li" to="/PostanAd">
-            Post an Ad
+            Listing
           </NavLink>
-          <NavLink className="li" to="/customer">Customer</NavLink>
+          <NavLink className="li" to="/customer">
+            Customer
+          </NavLink>
         </ul>
       </div>
     </nav>

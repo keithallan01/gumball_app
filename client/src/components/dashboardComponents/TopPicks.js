@@ -18,6 +18,12 @@ const TopPicks = () => {
         <li>
           <CardTopListing/>
         </li>
+        <li>
+          <CardTopListing/>
+        </li>
+        <li>
+          <CardTopListing/>
+        </li>
       </ul>
     </div>
   );
