@@ -35,7 +35,7 @@ public class Listing {
 
     public Listing(String item, String description,
                    String category, double askingPrice, Customer customer) {
-        this.item = item;
+        this.item = item.toUpperCase();
         this.description = description;
         this.category = category;
         this.askingPrice = askingPrice;
@@ -66,11 +66,11 @@ public class Listing {
     }
 
     public String getItem() {
-        return item.toUpperCase();
+        return item;
     }
 
     public void setItem(String item) {
-        this.item = item;
+        this.item = item.toUpperCase();
     }
 
     public String getDescription() {

@@ -1,7 +1,6 @@
 package com.example.GumballApp.repositories.ListingRepository;
 
 import com.example.GumballApp.models.Listing;
-import com.example.GumballApp.repositories.ListingRepository.ListingRepositoryCustom;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -17,7 +16,7 @@ public class ListingRepositoryImpl implements ListingRepositoryCustom {
     EntityManager entityManager;
 
     @Transactional
-    public List<Listing> findListingsByTown(String town){
+    public List<Listing> findListingsByTown(String town) {
         List<Listing> results = null;
         Session session = entityManager.unwrap(Session.class);
         try {
@@ -25,28 +24,11 @@ public class ListingRepositoryImpl implements ListingRepositoryCustom {
             cr.createAlias("customer", "customerAlias");
             cr.add(Restrictions.eq("customerAlias.town", town));
             results = cr.list();
-        } catch (HibernateException ex){
+        } catch (HibernateException ex) {
             ex.printStackTrace();
         } finally {
             session.close();
         }
         return results;
     }
-
-    @Transactional
-    public List<Listing> findAllListingsOrderBySearchCounterDesc(Long id);
-        List<Listing> results = null;
-        Session session = entityManager.unwrap(Session.class);
-        try {
-            Criteria cr = session.createCriteria(Listing.class);
-            cr.add(Restrictions.eq("listing.id", id));
-            results = cr.list();
-
-        }catch (HibernateException ex){
-            ex.printStackTrace();
-        } finally {
-            session.close();
-        }
-        return results;
-    }
-
+}

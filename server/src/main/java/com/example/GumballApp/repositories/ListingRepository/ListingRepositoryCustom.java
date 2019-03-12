@@ -7,6 +7,5 @@ import java.util.List;
 public interface ListingRepositoryCustom {
 
     List<Listing> findListingsByTown(String town);
-    List<Listing> findAllListingsOrderBySearchCounterDesc();
 
 }
