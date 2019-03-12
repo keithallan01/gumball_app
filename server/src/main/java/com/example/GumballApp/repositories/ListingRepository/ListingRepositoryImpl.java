@@ -5,6 +5,7 @@ import com.example.GumballApp.repositories.ListingRepository.ListingRepositoryCu
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -24,6 +25,22 @@ public class ListingRepositoryImpl implements ListingRepositoryCustom {
             Criteria cr = session.createCriteria(Listing.class);
             cr.createAlias("customer", "customerAlias");
             cr.add(Restrictions.eq("customerAlias.town", town));
+            results = cr.list();
+        } catch (HibernateException ex){
+            ex.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return results;
+    }
+
+    @Transactional
+    public List<Listing> sortListingsOrderBySearchCounterDesc(){
+        List<Listing> results = null;
+        Session session = entityManager.unwrap(Session.class);
+        try {
+            Criteria cr = session.createCriteria(Listing.class);
+            cr.addOrder(Order.desc("searchCounter"));
             results = cr.list();
         } catch (HibernateException ex){
             ex.printStackTrace();

@@ -36,4 +36,9 @@ public class ListingController {
         return listingRepository.findListingsByCategory(category);
     }
 
+    @GetMapping(value = "/hot")
+    public List<Listing> sortListingsOrderBySearchCounterDesc(){
+        return listingRepository.sortListingsOrderBySearchCounterDesc();
+    }
+
 }
