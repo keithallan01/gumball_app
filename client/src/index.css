@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* ----------------------- HEADINGS ---------------------- */
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 150%;
+  word-spacing: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 40px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+h2::after {
+  display: block;
+  height: 4px;
+  background-color: #ffce2e;
+  content: " ";
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+h5{
+  color: #2b1c09;
+}
+
+/*-------------------------------- Navbar ---------------------------------*/
+
+nav {
+  overflow: hidden;
+  background: #f8f9fa;
+  color: #5e4018;
+}
+
+.main-nav a {
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.logo {
+  float: left;
+  display: block;
+  max-width: 100px;
+  height: auto;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+  padding: 8px 0;
+  color: #4a3b08;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+  border-bottom: 4px solid #ffce2e;
+}
+
+.nav_container {
+  width: 80%;
+  margin: auto;
+}
+
+/*-------------------------------- Card ---------------------------------*/
+
+/* ------------------------ Card Listing ---------------------------------*/
+
+
+
+.listing-box ul{
+  list-style: none;
+ 
+}
+
+.listing-box li{
+  width: 85%;
+  margin-top: 20px;
+  margin-left: 30px;
+
+}
+
+.listing-box img{
+  width: 150px;
+}
+
+.card-listing{
+  display:flex;
+  padding: 10px;
+  border: 1px solid #e4a24d;
+  cursor: pointer;
+
+}
+
+.card-detail{
+  padding-left: 40px;
+  width: 100%;
+}
+
+.price-location{
+  display:flex;
+  padding-top: 25px;
+
+}
+
+.loction{
+  margin: 0 auto;
+  height:100%;
+  float: right;
+}
+
+.price{
+  float: left;
+  display: block;
+}
+/* ------------------------ Card top ---------------------------------*/
+
+
+
+.top-listing ul{
+  height: 240px;
+}
+
+.top-listing li {
+  list-style: none;
+  float: left;
+  width: 15%;
+  height: 240px;
+  margin: 0 10px;
+}
+
+.card-top {
+  cursor: pointer;
+}
+
+
+.card-listing, .card-top {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card-listing, .card-top:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+/* ------------------------ Search Bar ---------------------------------*/
+
+form.search-form input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.search-form button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.search-form button:hover {
+  background: #0b7dda;
+}
+
+form.search-form::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.search-div{
+  display: block;
+  margin-left: 18%;
+  margin-top: 3%;
+}
+
+/* cf1717 */
