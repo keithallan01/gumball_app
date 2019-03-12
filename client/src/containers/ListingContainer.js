@@ -54,8 +54,8 @@ class ListingContainer extends React.Component {
         .catch(error => console.error("Error:", error));
   };
 
-  handleUpdateListing = data => {
-    fetch("http://localhost:8080/listings/" + data.id, {
+  handleUpdateListing = (url, data) => {
+    fetch(url, {
       method: "PATCH", // or 'PUT'
       body: JSON.stringify(data), // data can be `string` or {object}!
       headers: {
@@ -72,7 +72,8 @@ class ListingContainer extends React.Component {
 
   handleDeleteListing = data => {
     console.log('delete function called')
-    fetch("http://localhost:8080/listings/" + data, {
+    console.log(data)
+    fetch(data, {
       method: "DELETE", // or 'PUT'
       body: JSON.stringify(data), // data can be `string` or {object}!
       headers: {

@@ -12,6 +12,8 @@ import {
 
 const EditListingForm = (props) => {
 
+    console.dir(props)
+
     const [newListing, setNewListing] = useState({
         id: props.listing.id,
         item: props.listing.item,
@@ -30,7 +32,7 @@ const EditListingForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        props.onListingUpdate(newListing);
+        props.onListingUpdate(props.listing._links.listing.href, newListing);
         setOpen(false);
     };
 
