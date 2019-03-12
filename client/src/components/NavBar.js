@@ -1,13 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../logo.png";
+import gumball_logo from "../gumball_logo.png";
 
 const NavBar = () => {
   return (
     <nav>
       <div className="nav_container">
         <NavLink exact to="/">
-          <img className="logo" src={logo} alt="logo" />
+          <img className="logo" src={gumball_logo} alt="gumball_logo" />
         </NavLink>
         <ul className="main-nav">
           <NavLink className="li" to="/PostanAd">
