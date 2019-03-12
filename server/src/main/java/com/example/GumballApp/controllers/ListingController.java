@@ -36,14 +36,19 @@ public class ListingController {
         return listingRepository.findListingsByCategory(category);
     }
 
-    @GetMapping(value = "/hot")
+    @GetMapping(value = "/top")
     public List<Listing> sortListingsOrderBySearchCounterDesc(){
         return listingRepository.sortListingsOrderBySearchCounterDesc();
     }
 
-    @GetMapping(value = "/item/hot/{item}")
-    public List<Listing> findByItemOrderBySearchCounterDesc(String item){
-        return listingRepository.findByItemOrderBySearchCounterDesc(item);
+    @GetMapping(value = "/category/top/{category}")
+    public List<Listing> findListingsByCategoryOrderBySearchCounterDesc(@PathVariable String category){
+        return listingRepository.findListingsByCategoryOrderBySearchCounterDesc(category);
+    }
+
+    @GetMapping(value = "/item/top/{item}")
+    public List<Listing> findListingsByItemOrderBySearchCounterDesc(@PathVariable String item){
+        return listingRepository.findListingsByItemOrderBySearchCounterDesc(item);
     }
 
     //ADDITIONAL QUERIES - OPTIONAL
