@@ -36,9 +36,28 @@ public class ListingController {
         return listingRepository.findListingsByCategory(category);
     }
 
-    @GetMapping(value = "/hot")
-    public List<Listing> sortListingsOrderBySearchCounterDesc(){
-        return listingRepository.sortListingsOrderBySearchCounterDesc();
+
+    //ADDITIONAL QUERIES - OPTIONAL
+    @GetMapping(value = "/item/low-high/{item}")
+    public List<Listing> findListingsByItemOrderByAskingPriceAsc(@PathVariable  String item){
+        return listingRepository.findListingsByItemOrderByAskingPriceAsc(item);
     }
+
+    @GetMapping(value = "/item/high-low/{item}")
+    public List<Listing> findListingsByItemOrderByAskingPriceDesc(@PathVariable  String item){
+        return listingRepository.findListingsByItemOrderByAskingPriceDesc(item);
+    }
+
+    @GetMapping(value = "/category/item/a-z/{category}")
+    public List<Listing> findListingsByCategoryOrderByItemAsc(@PathVariable  String category){
+        return listingRepository.findListingsByCategoryOrderByItemAsc(category);
+    }
+
+    @GetMapping(value = "/category/item/z-a/{item}")
+    public List<Listing> findListingsByCategoryOrderByItemDesc(@PathVariable  String category){
+        return listingRepository.findListingsByCategoryOrderByItemDesc(category);
+    }
+
+
 
 }
