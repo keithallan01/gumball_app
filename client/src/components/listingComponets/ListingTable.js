@@ -5,6 +5,7 @@ import EditListingForm from "./EditListingForm"
 const ListingTable = (props) => {
 
   const listingDetail = props.listingsArr.map(listing => {
+
     return (
       <tr key={listing.id}>
         <td>{listing.item}</td>
@@ -21,7 +22,7 @@ const ListingTable = (props) => {
         <td>
           <button
             className="btn-danger"
-            onClick={() => props.onListingDelete(listing.id)}
+            onClick={() => props.onListingDelete(listing._links.listing.href)}
           >
             Delete
           </button>
