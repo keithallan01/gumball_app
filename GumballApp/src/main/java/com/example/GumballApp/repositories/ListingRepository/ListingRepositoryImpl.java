@@ -32,4 +32,5 @@ public class ListingRepositoryImpl implements ListingRepositoryCustom {
         }
         return results;
     }
+
 }

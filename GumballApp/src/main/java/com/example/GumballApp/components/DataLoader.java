@@ -167,7 +167,7 @@ public void run(ApplicationArguments args) {
     listingRepository.save(listing18);
 
     Listing listing19 = new Listing("bike", "boneshaker",
-            "Sports & Leisure", 35.00, customer1);
+            "Sports & Leisure", 16.00, customer1);
     listing19.setSearchCounter(491L);
     listingRepository.save(listing19);
 
@@ -179,7 +179,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing21 = new Listing("bike", "boneshaker",
-            "Sports & Leisure", 35.00, customer1);
+            "Sports & Leisure", 37.00, customer1);
     listing21.setSearchCounter(317L);
     listingRepository.save(listing21);
 
@@ -219,7 +219,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing29 = new Listing("bike", "boneshaker",
-            "Sports & Leisure", 35.00, customer6);
+            "Sports & Leisure", 15.00, customer6);
     listingRepository.save(listing29);
 
 
@@ -228,7 +228,7 @@ public void run(ApplicationArguments args) {
     listingRepository.save(listing30);
 
     Listing listing31 = new Listing("bike", "boneshaker",
-            "Sports & Leisure", 35.00, customer4);
+            "Sports & Leisure", 20.00, customer4);
     listingRepository.save(listing31);
 
 
@@ -236,7 +236,7 @@ public void run(ApplicationArguments args) {
             "Kitchenware", 100.00, customer4);
     listingRepository.save(listing32);
     Listing listing33 = new Listing("bike", "boneshaker",
-            "Sports & Leisure", 35.00, customer7);
+            "Sports & Leisure", 105.00, customer7);
     listingRepository.save(listing33);
 
 
@@ -245,7 +245,7 @@ public void run(ApplicationArguments args) {
     listingRepository.save(listing34);
 
     Listing listing35 = new Listing("bike", "boneshaker",
-            "Sports & Leisure", 35.00, customer7);
+            "Sports & Leisure", 78.00, customer7);
     listingRepository.save(listing35);
 
 
@@ -254,7 +254,7 @@ public void run(ApplicationArguments args) {
     listingRepository.save(listing36);
 
     Listing listing37 = new Listing("bike", "boneshaker",
-            "Sports & Leisure", 35.00, customer3);
+            "Sports & Leisure", 55.00, customer3);
     listingRepository.save(listing37);
 
 

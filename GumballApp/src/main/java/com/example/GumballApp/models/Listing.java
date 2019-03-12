@@ -63,7 +63,7 @@ public class Listing {
     }
 
     public String getItem() {
-        return item;
+        return item.toUpperCase();
     }
 
     public void setItem(String item) {
