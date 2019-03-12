@@ -18,7 +18,7 @@ class DashboardContainer extends Component {
         <SearchBar />
         <CategoryContainer />
         <TopPicks listings={this.state.listings} />
-        <PickOfTheDay />
+        <PickOfTheDay listings={this.state.listings}/>
       </div>
     );
   }

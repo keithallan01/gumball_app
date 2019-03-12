@@ -13,7 +13,7 @@ const CardTopListing = props => {
         <div className="card-top" onClick={() => setOpen(true)}>
           <img width="100%" src={faker.image.avatar()} alt="Card cap" />
           <div className="container">
-            <h5>{listing.askingPrice}</h5>
+            <h5>{`£${listing.askingPrice}`}</h5>
           </div>
         </div>
         <Modal isOpen={open} toggle={() => setOpen(true)} className="top-listing">

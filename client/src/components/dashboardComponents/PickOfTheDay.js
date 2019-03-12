@@ -1,19 +1,12 @@
 import React from "react";
 import CardListing from "./CardListing";
 
-const PickOfTheDay = () => {
+const PickOfTheDay = props => {
   return (
     <div className="listing-box">
       <h2>Pick Of The Day</h2>
       <ul>
-       <li> <CardListing /></li>
-       <li> <CardListing /></li>
-       <li> <CardListing /></li>
-       <li> <CardListing /></li>
-       <li> <CardListing /></li>
-       <li> <CardListing /></li>
-       <li> <CardListing /></li>
-     
+        <CardListing listings={props.listings} />
       </ul>
     </div>
   );
@@ -21,4 +14,4 @@ const PickOfTheDay = () => {
 
 export default PickOfTheDay;
 
- 
+
