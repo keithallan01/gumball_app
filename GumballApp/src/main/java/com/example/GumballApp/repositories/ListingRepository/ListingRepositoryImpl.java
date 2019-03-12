@@ -33,4 +33,20 @@ public class ListingRepositoryImpl implements ListingRepositoryCustom {
         return results;
     }
 
-}
+    @Transactional
+    public List<Listing> findAllListingsOrderBySearchCounterDesc(Long id);
+        List<Listing> results = null;
+        Session session = entityManager.unwrap(Session.class);
+        try {
+            Criteria cr = session.createCriteria(Listing.class);
+            cr.add(Restrictions.eq("listing.id", id));
+            results = cr.list();
+
+        }catch (HibernateException ex){
+            ex.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return results;
+    }
+

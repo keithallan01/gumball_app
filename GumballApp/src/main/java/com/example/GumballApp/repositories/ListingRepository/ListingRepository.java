@@ -13,16 +13,13 @@ public interface ListingRepository extends JpaRepository<Listing, Long>, Listing
     List<Listing> findListingsByCustomerId(Long customerId);
 
     //  ADDITIONAL
-    List<Listing> findListingsByCustomerIdOrderByItemAsc(Long customerId);
-    List<Listing> findListingsByItemOrderByAskingPriceAsc(String Item);
-    List<Listing> findListingsByItemOrderByAskingPriceDesc(String Item);
+    List<Listing> findListingsByCustomerIdOrderByItemAsc(Long customerId); // works
+    List<Listing> findListingsByItemOrderByAskingPriceAsc(String Item); // works
+    List<Listing> findListingsByItemOrderByAskingPriceDesc(String Item); // works
 
-    List<Listing> findByItemOrderBySearchCounterDesc(String item);
+    List<Listing> findByItemOrderBySearchCounterDesc(String item); // works
 
-//    List<Listing> getAllListingsOrderBySearchCounterDesc();
-
-
-
+    List<Listing> findAllListingsOrderBySearchCounterDesc(); // working on
 
 }
 

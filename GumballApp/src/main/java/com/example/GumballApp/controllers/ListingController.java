@@ -54,23 +54,15 @@ public class ListingController {
         return listingRepository.findListingsByItemOrderByAskingPriceDesc(item);
     }
 
-    @GetMapping(value = "/hot")
-    public List<Listing> getAllListingsOrderBySearchCounter(){
-//        return listingRepository.getAllListingsOrderBySearchCounter();
-        return listingRepository.findAll(new Sort(Sort.Direction.DESC, "search_counter"));
+    @GetMapping(value = "/item-count-order/{item}")
+    public List<Listing> findByItemOrderBySearchCounterDesc (@PathVariable String item){
+        return listingRepository.findByItemOrderBySearchCounterDesc(item);
     }
 
-//    @GetMapping(value = "/item-count-order/{item}")
-////    public List<Listing> findByItemOrderBySearchCounterDesc (@PathVariable String item){
-////        return listingRepository.findByItemOrderBySearchCounterDesc(item);
-////    }
-
-//    @GetMapping(value = "/hot")
-//    public List<Listing> getAllListingsOrderBySearchCounterDesc (@PathVariable String item){
-//        return listingRepository.findByItemOrderBySearchCounterDesc(item);
-//    }
-
-
+    @GetMapping(value = "/hot")
+    public List<Listing> findAllListingsOrderBySearchCounterDesc (){
+        return listingRepository.findByItemOrderBySearchCounterDesc();
+    }
 
 
 }
@@ -79,5 +71,13 @@ public class ListingController {
 //    public List<Listing> findAll(@PathVariable Specification<Listing> spec){
 //        return listingRepository.findAll(spec);
 //    }
+
+//    @GetMapping(value = "/hot")
+//    public List<Listing> getAllListingsOrderBySearchCounter(){
+//       return listingRepository.getAllListingsOrderBySearchCounter();
+//        return listingRepository.findAll(new Sort(Sort.Direction.DESC, "search_counter"));
+//    }
+
+
 
 
