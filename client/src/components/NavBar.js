@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import gumball_logo from "../gumball_logo.png";
+import gumball_logo from "../logos/gumball_logo.png";
 
 const NavBar = () => {
   return (

@@ -155,6 +155,17 @@ nav {
 }
 /* ------------------------ Card top ---------------------------------*/
 
+.categories ul{ 
+  height: 120px;
+}
+
+.categories li {
+  list-style: none;
+  float: left;
+  width: 10%;
+  height: 120px;
+  margin: 0 10px;
+}
 
 
 .top-listing ul{
