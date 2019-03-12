@@ -6,7 +6,7 @@ const CardTopListing = props => {
 
   const [open, setOpen] = useState(false)
 
-  const listingDetail = props.listings.map((listing) => {
+  const listingDetail = props.listings.slice(0, 6).map((listing) => {
 
     return (
       <li>
