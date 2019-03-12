@@ -12,8 +12,6 @@ import {
 
 const EditListingForm = (props) => {
 
-    console.dir(props)
-
     const [newListing, setNewListing] = useState({
         id: props.listing.id,
         item: props.listing.item,
