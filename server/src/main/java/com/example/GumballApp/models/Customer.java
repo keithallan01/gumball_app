@@ -15,7 +15,6 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @Column(name="first_name")
     private String firstName;
 
@@ -34,13 +33,10 @@ public class Customer {
     @Column(name="email_address")
     private String emailAddress;
 
-
-    // TODO: JSON IGNOREPROPERTIES
-    //
     @JsonIgnoreProperties("customer")
-    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
-    private List<Listing> listings;
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
 
+    private List<Listing> listings;
 
     public Customer(String firstName, String lastName,
                     String address, String town, String telephoneNumber,

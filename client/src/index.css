@@ -49,13 +49,16 @@ h2::after {
   margin: 0 auto;
   margin-top: 5px;
 }
+h5{
+  color: #2b1c09;
+}
 
 /*-------------------------------- Navbar ---------------------------------*/
 
 nav {
   overflow: hidden;
   background: #f8f9fa;
-  color: #212528;
+  color: #5e4018;
 }
 
 .main-nav a {
@@ -124,7 +127,9 @@ nav {
 .card-listing{
   display:flex;
   padding: 10px;
-  border: 1px solid #ffce2e;
+  border: 1px solid #e4a24d;
+  cursor: pointer;
+
 }
 
 .card-detail{
@@ -150,6 +155,8 @@ nav {
 }
 /* ------------------------ Card top ---------------------------------*/
 
+
+
 .top-listing ul{
   height: 240px;
 }
@@ -161,6 +168,11 @@ nav {
   height: 240px;
   margin: 0 10px;
 }
+
+.card-top {
+  cursor: pointer;
+}
+
 
 .card-listing, .card-top {
   /* Add shadows to create the "card" effect */
@@ -178,3 +190,43 @@ nav {
   padding: 2px 16px;
 }
 
+/* ------------------------ Search Bar ---------------------------------*/
+
+form.search-form input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.search-form button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.search-form button:hover {
+  background: #0b7dda;
+}
+
+form.search-form::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.search-div{
+  display: block;
+  margin-left: 18%;
+  margin-top: 3%;
+}
+
+/* cf1717 */

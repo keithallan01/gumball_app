@@ -36,7 +36,7 @@ const AddCustomerForm = (props) => {
     };
 
     return (
-        <div className="add-customer-form">
+        <div className="add-customer-form container">
             <Button
                 className="my-3"
                 color="primary"
@@ -48,7 +48,7 @@ const AddCustomerForm = (props) => {
                 isOpen={open}
                 toggle={() => setOpen(true)}
             >
-                <ModalHeader toggle={() => setOpen(true)}>
+                <ModalHeader toggle={() => setOpen(false)}>
                     Add New Customer
                     </ModalHeader>
                 <ModalBody>

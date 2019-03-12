@@ -1,4 +1,4 @@
-package com.example.GumballApp.repositories;
+package com.example.GumballApp.repositories.CustomerRepository;
 import com.example.GumballApp.models.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 

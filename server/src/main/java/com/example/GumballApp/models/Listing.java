@@ -1,5 +1,7 @@
 package com.example.GumballApp.models;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,19 +11,23 @@ public class Listing {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "item")
     private String item;
+
     @Column(name = "description")
     private String description;
+
     @Column(name = "category")
     private String category;
+
     @Column(name = "asking_price")
     private double askingPrice;
-    @Column(name = "search_counter")
-    private Long searchCounter;
 
-    // TODO: JSON IGNOREPROPERTIES
-    // RELATIONSHIP
+    @Column(name = "search_counter")
+    @Value("${default.searchCounter")
+    private long searchCounter;
+
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
    private Customer customer;
@@ -43,7 +49,7 @@ public class Listing {
         this.searchCounter++;
     }
 
-    public void setSearchCounter(Long searchCouner) {
+    public void setSearchCounter(long searchCounter) {
         this.searchCounter = searchCounter;
     }
 

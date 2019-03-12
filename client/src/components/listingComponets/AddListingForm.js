@@ -51,12 +51,12 @@ const AddListingForm = props => {
   });
 
   return (
-    <div className="add-Listing-form">
+    <div className="add-Listing-form container">
       <Button className="my-3" color="primary" onClick={() => setOpen(true)}>
         Add Listing
       </Button>
       <Modal isOpen={open} toggle={() => setOpen(true)}>
-        <ModalHeader toggle={() => setOpen(true)}>Add New Listing</ModalHeader>
+        <ModalHeader toggle={() => setOpen(false)}>Add New Listing</ModalHeader>
         <ModalBody>
           <FormGroup>
             <Label for="customer">Select Customer</Label>

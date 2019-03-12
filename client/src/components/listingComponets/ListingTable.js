@@ -8,7 +8,7 @@ const ListingTable = (props) => {
     return (
       <tr key={listing.id}>
         <td>{listing.item}</td>
-        <td>{listing.decription}</td>
+        <td>{listing.description}</td>
         <td>{listing.category}</td>
         <td>{listing.askingPrice}</td>
         <td>{listing.searchCounter}</td>
@@ -36,7 +36,7 @@ const ListingTable = (props) => {
         <thead>
           <tr>
             <th>Item</th>
-            <th>Decription</th>
+            <th>Description</th>
             <th>Category</th>
             <th>Price</th>
             <th>No. Views</th>

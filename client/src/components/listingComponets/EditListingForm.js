@@ -15,7 +15,7 @@ const EditListingForm = (props) => {
     const [newListing, setNewListing] = useState({
         id: props.listing.id,
         item: props.listing.item,
-        decription: props.listing.decription,
+        description: props.listing.description,
         category: props.listing.category,
         askingPrice: props.listing.askingPrice,
         searchCounter: props.listing.searchCounter
@@ -59,11 +59,11 @@ const EditListingForm = (props) => {
                             onChange={handleInputChange}
                         />
 
-                        <Label for="decription">Decription</Label>
+                        <Label for="description">Description</Label>
                         <Input
                             type="text"
-                            id="decription"
-                            defaultValue={newListing.decription}
+                            id="description"
+                            defaultValue={newListing.description}
                             onChange={handleInputChange}
                         />
 
