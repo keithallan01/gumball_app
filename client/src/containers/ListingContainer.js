@@ -33,9 +33,9 @@ class ListingContainer extends React.Component {
       .then(data => this.setState({ customers: data._embedded.customers }));
         
     
-    fetch("http://localhost:8080/listings")
+    fetch("http://localhost:8080/listings/top")
       .then(res => res.json())
-      .then(data => this.setState({ listings: data._embedded.listings }));
+      .then(listings => this.setState({ listings: listings }));
   }
 
   handleNewListingSubmit = data => {

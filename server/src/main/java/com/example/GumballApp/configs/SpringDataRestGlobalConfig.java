@@ -1,6 +1,7 @@
 package com.example.GumballApp.configs;
 
 import com.example.GumballApp.models.Customer;
+import com.example.GumballApp.models.Listing;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;

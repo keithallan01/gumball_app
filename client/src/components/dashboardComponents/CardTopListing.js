@@ -11,7 +11,7 @@ const CardTopListing = props => {
     return (
       <li>
         <div className="card-top" onClick={() => setOpen(true)}>
-          <img width="100%" src={faker.image.avatar()} alt="Card cap" />
+          <img width="100%" src={listing.image} alt="Card cap" />
           <div className="container">
             <h5>{`£${listing.askingPrice}`}</h5>
           </div>

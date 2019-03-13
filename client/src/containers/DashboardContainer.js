@@ -25,9 +25,9 @@ class DashboardContainer extends Component {
 
   componentDidMount() {
     console.log('did mount')
-    fetch("http://localhost:8080/listings")
+    fetch("http://localhost:8080/listings/top")
       .then(res => res.json())
-      .then(data => this.setState({ listings: data._embedded.listings }));
+      .then(listings => this.setState({ listings: listings }));
   }
 
 }
