@@ -18,9 +18,9 @@ const AddListingForm = props => {
     category: "",
     askingPrice: "",
     searchCounter: 0,
+    image:"",
     customer: ""
   });
-
   const [open, setOpen] = useState(false);
 
   const handleInputChange = e => {
@@ -36,11 +36,24 @@ const AddListingForm = props => {
     });
   };
 
+  const fileSelectedHandler = (e) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    reader.onload = (e) => {
+    const result = e.target.result
+    console.log(result)
+    setNewListing({image: result})
+    }
+  }
+
+  
   const handleSubmit = e => {
     e.preventDefault();
     props.onListingSubmit(newListing);
     setOpen(false);
   };
+
+  
 
   const customerNames = props.customersArr.map(customer => {
     return (
@@ -98,8 +111,15 @@ const AddListingForm = props => {
               onChange={handleInputChange}
             />
 
-            <Label for="exampleFile">File</Label>
-            <Input type="file" name="file" id="exampleFile" />
+            <Label for="image">File</Label>
+            <Input type="file" 
+              id="image" 
+              defaultValue={newListing.image}
+              onInput={fileSelectedHandler}
+              // defaultValue={input}
+              // onInput={e => setInput(e.target.files[0])}
+              
+              />
           </FormGroup>
         </ModalBody>
         <ModalFooter>

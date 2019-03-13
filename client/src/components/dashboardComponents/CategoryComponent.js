@@ -1,33 +1,38 @@
 import React from "react";
-import CardTopListing from "./CardTopListing";
 
-const CategoryComponent = () => {
+const CategoryComponent = (props) => {
+
+
+  
+
+
   return (
     <div className="categories">
       <h2>Categories</h2>
       <ul >
         <li>
-          <a href="/listings/automotive">Automotive</a>
-        </li><li>
-          <a href="/listings/books">Books</a>
+        <div className="categories-links" onClick={() => props.onClickCategory("Automotive")}>Automotive</div>
+        </li>
+        <div className="categories-links" onClick={() => props.onClickCategory("Books")}>Books</div>
+        <li>
+        <div className="categories-links" onClick={() => props.onClickCategory("Clothing")}>Clothing</div>
         </li>
         <li>
-          <a href="/listings/clothing">Clothing</a>
+          <div className="categories-links" onClick={() => props.onClickCategory("Computing & Technology")}>Computing and Technology</div>
         </li>
         <li>
-          <a href="/listings/Computing+&amp;+Technology">Computing and Technology</a>
+        <div className="categories-links" onClick={() => props.onClickCategory("Food & Drink")}>Food and Drink</div>
+
+          {/* <a href="/listings/Food+&amp;+Drink">Food and Drink</a> */}
         </li>
         <li>
-          <a href="/listings/Food+&amp;+Drink">Food and Drink</a>
+        <div className="categories-links" onClick={() => props.onClickCategory("Health & Beauty")}>Health and Beauty</div>
         </li>
         <li>
-         <a href="/listings/Health+&amp;+Beauty">Health and Beauty</a>
+        <div className="categories-links" onClick={() => props.onClickCategory("Kitchenware")}>Kitchenware</div>
         </li>
         <li>
-          <a href="listings/Kitchenware">Kitchenware</a>
-        </li>
-        <li>
-          <a href="/listings/Sports+&amp;+Leisure">Sports and Leisure</a>
+        <div className="categories-links" onClick={() => props.onClickCategory("Sports & Leisure")}>Sports and Leisure</div>
         </li>
       </ul>
     </div>

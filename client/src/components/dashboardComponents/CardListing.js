@@ -4,7 +4,6 @@ import faker from "faker";
 const CardListing = props => {
 
   const listingDetail = props.listings.map((listing) => {
-    console.dir(listing)
     return (
       <div className="card-listing">
         <div>

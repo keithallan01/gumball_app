@@ -10,13 +10,14 @@ class DashboardContainer extends Component {
     this.state = {
       listings: []
     };
+    this.handleSearchByCategory = this.handleSearchByCategory.bind(this)
   }
   render() {
     if (this.state.listings.length === 0) return null;
     return (
       <div>
         <SearchBar />
-        <CategoryContainer />
+        <CategoryContainer onClickCategory={this.handleSearchByCategory}/>
         <TopPicks listings={this.state.listings} />
         <PickOfTheDay listings={this.state.listings}/>
       </div>
@@ -24,12 +25,19 @@ class DashboardContainer extends Component {
   }
 
   componentDidMount() {
-    console.log('did mount')
     fetch("http://localhost:8080/listings")
       .then(res => res.json())
       .then(data => this.setState({ listings: data._embedded.listings }));
   }
 
+  handleSearchByCategory(category) {
+    console.log(category)
+    fetch("http://localhost:8080/listings/category/" + category)
+      .then(res => res.json())
+      .then(listings => this.setState({ listings: listings }));
+  }
+
 }
 
 export default DashboardContainer;
+

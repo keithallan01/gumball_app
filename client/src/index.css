@@ -242,3 +242,9 @@ form.search-form::after {
 }
 
 /* cf1717 */
+
+/* ------------------------ categories ---------------------------------*/
+
+.categories-links{
+  cursor: pointer;
+}
