@@ -33,12 +33,13 @@ class DashboardContainer extends Component {
       .then(data => this.setState({ listings: data._embedded.listings }));
   }
 
+
   handleSearchByCategory(category) {
     console.log(category)
     fetch("http://localhost:8080/listings/category/" + category)
       .then(res => res.json())
       .then(listings => this.setState({ listings: listings }));
-
+  }
   handleListingSearch = data => {
 
     let lowerCaseInput = data.toLowerCase();
