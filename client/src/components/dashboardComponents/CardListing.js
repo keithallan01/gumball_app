@@ -7,18 +7,20 @@ const CardListing = props => {
     console.dir(listing)
 
 
-    const click = e => {
-      console.log(e.target.value);
+    const handleClick = e => {
+      listing.searchCounter++
+      props.handleListingClick(listing);
     }
 
     return (
-      <div className="card-listing" onClick={click} value={listing.id}>
+      <li className="card-listing" onClick={handleClick} value={listing}>
       {/* http://localhost:8080/listings/{listings.id} */}
         <div>
-          <img src={faker.image.avatar()} alt="Card cap" onClick={() => click} value={listing.id} />
+          <img src={faker.image.avatar()} alt="Card cap"/>
         </div>
         <div className="card-detail">
           <h3>{listing.item}</h3>
+          {/* <h3>{listing.id}</h3> */}
           <h5>{listing.description}</h5>
           <div className="price-location">
             <div className="price">
@@ -29,7 +31,7 @@ const CardListing = props => {
             </div>
           </div>
         </div>
-      </div>
+      </li>
     );
   })
 

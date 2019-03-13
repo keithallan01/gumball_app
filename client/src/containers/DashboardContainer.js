@@ -20,7 +20,7 @@ class DashboardContainer extends Component {
         <ListingSearchContainer handleListingSearch={this.handleListingSearch}/>
         <CategoryContainer />
         <TopPicks listings={this.state.listings} />
-        <PickOfTheDay listings={this.state.listings}/>
+        <PickOfTheDay listings={this.state.listings} handleListingClick={this.handleListingClick}/>
       </div>
     );
   }
@@ -47,7 +47,17 @@ class DashboardContainer extends Component {
       }
     this.setState({ listings: this.state.matches});
   }
-
+  handleListingClick = data => {
+    fetch("http://localhost:8080/listings/" + data.id, {
+      method: "PATCH", // or 'PUT'
+      body: JSON.stringify(data), // data can be `string` or {object}!
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+  };
 }
+
+
 
 export default DashboardContainer;
