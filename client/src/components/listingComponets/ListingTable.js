@@ -22,7 +22,7 @@ const ListingTable = (props) => {
         <td>
           <button
             className="btn-danger"
-            onClick={() => props.onListingDelete(listing._links.listing.href)}
+            onClick={() => props.onListingDelete(listing.id)}
           >
             Delete
           </button>

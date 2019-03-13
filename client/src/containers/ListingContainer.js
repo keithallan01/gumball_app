@@ -52,14 +52,14 @@ class ListingContainer extends React.Component {
       }
     })
       .then(res => res.json())
-      .then(response => fetch("http://localhost:8080/listings")
+      .then(response => fetch("http://localhost:8080/listings/top")
         .then(res => res.json())
-        .then(data => this.setState({ listings: data._embedded.listings })))
+        .then(listings => this.setState({ listings: listings })))
         .catch(error => console.error("Error:", error));
   };
 
-  handleUpdateListing = (url, data) => {
-    fetch(url, {
+  handleUpdateListing = (id, data) => {
+    fetch("http://localhost:8080/listings/" + id, {
       method: "PATCH", // or 'PUT'
       body: JSON.stringify(data), // data can be `string` or {object}!
       headers: {
@@ -67,27 +67,26 @@ class ListingContainer extends React.Component {
       }
     })
     .then(res => res.json())
-    .then(response => fetch("http://localhost:8080/listings")
+    .then(response => fetch("http://localhost:8080/listings/top")
       .then(res => res.json())
-      .then(data => this.setState({ listings: data._embedded.listings })))
+      .then(listings => this.setState({ listings: listings })))
       .catch(error => console.error("Error:", error));
   };
 
 
-  handleDeleteListing = data => {
+  handleDeleteListing = id => {
     console.log('delete function called')
-    console.log(data)
-    fetch(data, {
+    fetch("http://localhost:8080/listings/" + id, {
       method: "DELETE", // or 'PUT'
-      body: JSON.stringify(data), // data can be `string` or {object}!
+      body: JSON.stringify(id), // data can be `string` or {object}!
       headers: {
         "Content-Type": "application/json"
       }
     })
     .then(res => res.text())
-    .then(res => fetch("http://localhost:8080/listings")
+    .then(res => fetch("http://localhost:8080/listings/top")
     .then(res => res.json())
-    .then(data => this.setState({ listings: data._embedded.listings })))
+    .then(listings => this.setState({ listings: listings })))
     .catch(error => console.error("Error:", error));
 
   };

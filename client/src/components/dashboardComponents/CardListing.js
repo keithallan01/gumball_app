@@ -1,28 +1,31 @@
-import React from "react";
-import faker from "faker";
+import React, { useState } from "react";
+// import faker from "faker";
 
 const CardListing = props => {
 
+
+
   const listingDetail = props.listings.map((listing) => {
 
+
+    const [newListing, setNewListing] = useState({
+      id: listing.id,
+      item: listing.item,
+      description: listing.description,
+      category: listing.category,
+      askingPrice: listing.askingPrice,
+      searchCounter: listing.searchCounter
+    })
+
     const handleClick = e => {
-      listing.searchCounter++
-      props.handleListingClick(listing);
+      setNewListing({ ...newListing, searchCounter: listing.searchCounter + 1 })
+      props.handleListingClick(newListing, listing.id);
     }
-    
+
     return (
       <li className="card-listing" onClick={handleClick} value={listing}>
-      {/* http://localhost:8080/listings/{listings.id} */}
+        {/* http://localhost:8080/listings/{listings.id} */}
         <div>
-<<<<<<< HEAD
-          <img src={faker.image.avatar()} alt="Card cap"/>
-        </div>
-        <div className="card-detail">
-          <h3>{listing.item}</h3>
-          {/* <h3>{listing.id}</h3> */}
-          <h5>{listing.description}</h5>
-          <div className="price-location">
-=======
           <img src={listing.image} alt="Card cap" />
         </div>
         <div className="card-detail">
@@ -31,20 +34,11 @@ const CardListing = props => {
           <h4>{`£${listing.askingPrice}`}</h4>
         </div>
         <div className="card-description">
-            <h5>{listing.description}</h5>
-        </div>
-          {/* <div className="loction">
->>>>>>> develop
-            <div className="price">
-          </div>
-<<<<<<< HEAD
+          <h5>{listing.description}</h5>
         </div>
       </li>
-=======
-          </div> */}
-      </div>
->>>>>>> develop
-    );
+    )
+
   })
 
   return (
