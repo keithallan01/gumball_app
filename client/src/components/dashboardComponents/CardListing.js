@@ -6,10 +6,6 @@ const CardListing = props => {
 
 
   const listingDetail = props.listings.map((listing) => {
-<<<<<<< HEAD
-    const click = e => {
-      console.log(e.target.value);
-=======
 
 
     const [newListing, setNewListing] = useState({
@@ -24,7 +20,6 @@ const CardListing = props => {
     const handleClick = e => {
       setNewListing({ ...newListing, searchCounter: listing.searchCounter + 1 })
       props.handleListingClick(newListing, listing.id);
->>>>>>> develop
     }
 
     return (

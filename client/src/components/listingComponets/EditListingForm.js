@@ -31,10 +31,7 @@ const EditListingForm = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         props.onListingUpdate(props.listing.id, newListing);
-<<<<<<< HEAD
-=======
         console.dir(props.listing.id)
->>>>>>> develop
         setOpen(false);
     };
 
