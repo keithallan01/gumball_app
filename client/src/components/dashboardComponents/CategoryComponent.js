@@ -22,8 +22,6 @@ const CategoryComponent = (props) => {
         </li>
         <li>
         <div className="categories-links" onClick={() => props.onClickCategory("Food & Drink")}>Food and Drink</div>
-
-          {/* <a href="/listings/Food+&amp;+Drink">Food and Drink</a> */}
         </li>
         <li>
         <div className="categories-links" onClick={() => props.onClickCategory("Health & Beauty")}>Health and Beauty</div>
