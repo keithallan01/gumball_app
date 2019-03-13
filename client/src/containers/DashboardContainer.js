@@ -9,7 +9,8 @@ class DashboardContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listings: []
+      listings: [],
+      matches: []
     };
     this.handleSearchByCategory = this.handleSearchByCategory.bind(this)
   }
@@ -37,6 +38,22 @@ class DashboardContainer extends Component {
     fetch("http://localhost:8080/listings/category/" + category)
       .then(res => res.json())
       .then(listings => this.setState({ listings: listings }));
+
+  handleListingSearch = data => {
+
+    let lowerCaseInput = data.toLowerCase();
+        for (let i = 0; i < this.state.listings.length; i++){
+        const listing = this.state.listings[i];
+        if ((listing.item.toLowerCase().includes(lowerCaseInput))
+        ||
+        (listing.description.toLowerCase().includes(lowerCaseInput))
+        ||
+        (listing.category.toLowerCase().includes(lowerCaseInput))){
+          this.state.matches.push(this.state.listings[i])
+        }
+      }
+    this.setState({ listings: this.state.matches});
+
   }
 
 }
