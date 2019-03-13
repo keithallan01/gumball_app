@@ -93,14 +93,13 @@ class ListingContainer extends React.Component {
   };
 
   handleListingSearch = data => {
+
     let lowerCaseInput = data.toLowerCase();
         for (let i = 0; i < this.state.listings.length; i++){
         const listing = this.state.listings[i];
         if ((listing.item.toLowerCase().includes(lowerCaseInput))
         ||
         (listing.description.toLowerCase().includes(lowerCaseInput))
-        // ||
-        // (listing.askingPrice.toLowerCase().includes(lowerCaseInput))
         ||
         (listing.category.toLowerCase().includes(lowerCaseInput))){
           this.state.matches.push(this.state.listings[i])

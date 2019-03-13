@@ -16,17 +16,18 @@ class ListingSearchComponent extends React.Component
 
     render() {
         return (
-            <div className="search">
-                <input type="text" value={this.state.value} onChange={this.handleChange}/>
-                <button
-                className="btn-search"
-                onClick={() => {this.props.handleListingSearch(this.state.value,
-                this.state.value = '')
-            }
-                } 
-                >
-                Search
-              </button>
+            <div className="search-div">
+                <form className="search-form"></form>
+                 <input type="text" value={this.state.value} onChange={this.handleChange}/>
+                    <button
+                    className="btn-search"
+                    onClick={() => {this.props.handleListingSearch(this.state.value,
+                    this.state.value = '')
+                    }} >
+                     Search
+                    </button>
+                    <i className="fa fa-search" />
+
             </div>
          )
     }

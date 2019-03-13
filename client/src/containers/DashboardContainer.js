@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import TopPicks from "../components/dashboardComponents/TopPicks";
 import PickOfTheDay from "../components/dashboardComponents/PickOfTheDay";
 import SearchBar from '../components/dashboardComponents/SearchBar';
-import CategoryContainer from '../components/dashboardComponents/CategoryComponent'
+import CategoryContainer from '../components/dashboardComponents/CategoryComponent';
+import ListingSearchContainer from '../components/listingComponets/ListingSearchComponent';
 
 class DashboardContainer extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class DashboardContainer extends Component {
   render() {
     return (
       <div>
-        <SearchBar/>
+        <ListingSearchContainer handleListingSearch={this.handleListingSearch}/>
           <CategoryContainer />
           <TopPicks/>
           <PickOfTheDay />

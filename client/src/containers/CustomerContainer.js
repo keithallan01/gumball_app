@@ -102,7 +102,6 @@ class CustomerContainer extends React.Component {
           this.state.matches.push(this.state.customers[i])
         }
       }
-    // console.log(this.state.matches);
     this.setState({ customers: this.state.matches});
   }
 
