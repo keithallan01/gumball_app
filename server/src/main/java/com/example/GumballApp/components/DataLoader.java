@@ -73,7 +73,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing2 = new Listing("cooker", "aga",
-            "Kitchenware", 100.00, customer1);
+            "Food & Drink", 100.00, customer1);
     listing2.setSearchCounter(250L);
     listingRepository.save(listing2);
 
@@ -108,7 +108,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing8 = new Listing("Java for Dummies", "Reference book",
-            "Books & Literature", 12.00, customer6);
+            "Books", 12.00, customer6);
     listing8.setSearchCounter(249L);
     listingRepository.save(listing8);
 
