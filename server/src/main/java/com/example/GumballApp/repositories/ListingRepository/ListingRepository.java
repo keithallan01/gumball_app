@@ -10,6 +10,7 @@ public interface ListingRepository extends JpaRepository<Listing, Long>, Listing
     List<Listing> findListingsByTown(String town);
     List<Listing> findListingsByCategory(String category);
     List<Listing> findListingsByCustomerId(Long customerId);
+    List<Listing> findListingsByPrice(double price);
     List<Listing> sortListingsOrderBySearchCounterDesc();
     List<Listing> findListingsByCategoryOrderBySearchCounterDesc(String category);
     List<Listing> findListingsByItemOrderBySearchCounterDesc(String item);
