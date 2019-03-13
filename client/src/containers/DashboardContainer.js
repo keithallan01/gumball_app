@@ -9,7 +9,8 @@ class DashboardContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listings: []
+      listings: [],
+      matches: []
     };
   }
   render() {

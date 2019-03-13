@@ -5,10 +5,17 @@ const CardListing = props => {
 
   const listingDetail = props.listings.map((listing) => {
     console.dir(listing)
+
+
+    const click = e => {
+      console.log(e.target.value);
+    }
+
     return (
-      <div className="card-listing">
+      <div className="card-listing" onClick={click} value={listing.id}>
+      {/* http://localhost:8080/listings/{listings.id} */}
         <div>
-          <img src={faker.image.avatar()} alt="Card cap" />
+          <img src={faker.image.avatar()} alt="Card cap" onClick={() => click} value={listing.id} />
         </div>
         <div className="card-detail">
           <h3>{listing.item}</h3>
