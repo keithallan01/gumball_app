@@ -22,7 +22,7 @@ class DashboardContainer extends Component {
         <CategoryContainer onClickCategory={this.handleSearchByCategory}/>
         <ListingSearchContainer handleListingSearch={this.handleListingSearch}/>
         <TopPicks listings={this.state.listings} />
-        <PickOfTheDay listings={this.state.listings}/>
+        <PickOfTheDay listings={this.state.listings} handleListingClick={this.handleListingClick}/>
       </div>
     );
   }
@@ -57,8 +57,26 @@ class DashboardContainer extends Component {
     this.setState({ listings: this.state.matches});
 
   }
+  handleListingClick = (data, id) => {
+    console.log(data)
+    console.log(id)
+    fetch("http://localhost:8080/listings/" + id, {
+      method: "PATCH", // or 'PUT'
+      body: JSON.stringify(data), // data can be `string` or {object}!
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(response => fetch("http://localhost:8080/listings/top")
+      .then(res => res.json())
+      .then(listings => this.setState({ listings: listings })))
+      .catch(error => console.error("Error:", error));
+  };
 
 }
+
+
 
 export default DashboardContainer;
 
