@@ -90,7 +90,7 @@ public void run(ApplicationArguments args) {
     listingRepository.save(listing4);
 
     Listing listing5 = new Listing("computer", "amiga",
-            "Computing and Technology", 35.00, "http://www.classiccmp.org/dunfield/amiga/h/a500.jpg", customer3);
+            "Computing & Technology", 35.00, "http://www.classiccmp.org/dunfield/amiga/h/a500.jpg", customer3);
     listing5.setSearchCounter(172L);
     listingRepository.save(listing5);
 
@@ -102,7 +102,7 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing7 = new Listing("hairdryer", "blows hot air",
-            "Health and Beauty", 24.00,"https://target.scene7.com/is/image/Target/GUEST_2b29c8e7-736a-453a-b3f3-728db975536c?wid=488&hei=488&fmt=pjpeg", customer1);
+            "Health & Beauty", 24.00,"https://target.scene7.com/is/image/Target/GUEST_2b29c8e7-736a-453a-b3f3-728db975536c?wid=488&hei=488&fmt=pjpeg", customer1);
     listing7.setSearchCounter(50L);
     listingRepository.save(listing7);
 
@@ -131,150 +131,9 @@ public void run(ApplicationArguments args) {
 
 
     Listing listing12 = new Listing("tomatoes", "allotment surplus",
-            "Kitchenware", 120.00, "https://www.thompson-morgan.com/product_images/100/zoom/z-TOMA-TM54735-A_h.jpg", customer1);
+            "Food & Drink", 120.00, "https://www.thompson-morgan.com/product_images/100/zoom/z-TOMA-TM54735-A_h.jpg", customer1);
     listing12.setSearchCounter(235L);
     listingRepository.save(listing12);
 
-//    Listing listing13 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 35.00, customer1);
-//    listing13.setSearchCounter(401L);
-//    listingRepository.save(listing13);
-//
-//    Listing listing14= new Listing("cooker", "aga",
-//            "Kitchenware", 105.00, customer1);
-//    listing14.setSearchCounter(111L);
-//    listingRepository.save(listing14);
-//
-//    Listing listing15 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 35.00, customer1);
-//    listing15.setSearchCounter(297L);
-//    listingRepository.save(listing15);
-//
-//
-//    Listing listing16 = new Listing("cooker", "aga",
-//            "Kitchenware", 125.00, customer1);
-//    listing16.setSearchCounter(351L);
-//    listingRepository.save(listing16);
-//
-//    Listing listing17 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 35.00, customer1);
-//    listing17.setSearchCounter(23L);
-//    listingRepository.save(listing17);
-//
-//    Listing listing18= new Listing("cooker", "aga",
-//            "Kitchenware", 200.00, customer1);
-//    listing18.setSearchCounter(539L);
-//    listingRepository.save(listing18);
-//
-//    Listing listing19 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 16.00, customer1);
-//    listing19.setSearchCounter(491L);
-//    listingRepository.save(listing19);
-//
-//
-//    Listing listing20 = new Listing("cooker", "aga",
-//            "Kitchenware", 100.00, customer1);
-//    listing20.setSearchCounter(222L);
-//    listingRepository.save(listing20);
-//
-//
-//    Listing listing21 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 37.00, customer1);
-//    listing21.setSearchCounter(317L);
-//    listingRepository.save(listing21);
-//
-//
-//    Listing listing22 = new Listing("cooker", "aga",
-//            "Kitchenware", 135.00, customer1);
-//    listing22.setSearchCounter(567L);
-//    listingRepository.save(listing22);
-//
-//    Listing listing23 = new Listing("Trouser", "Chinos",
-//            "Clothing", 22.00, customer1);
-//    listingRepository.save(listing3);
-//
-//
-//    Listing listing24 = new Listing("IT", "Steven King Book",
-//            "Books", 5.00, customer1);
-//    listingRepository.save(listing24);
-//
-//    Listing listing25 = new Listing("laptop", "macbook pro",
-//            "Computing and Technology", 35.00, customer3);
-//    listingRepository.save(listing25);
-//
-//
-//    Listing listing26 = new Listing("Tent", "4 Person",
-//            "Sports & Leisure", 89.00, customer3);
-//    listingRepository.save(listing26);
-//
-//
-//    Listing listing27 = new Listing("games console", "playstation",
-//            "Computing and Technology", 24.00, customer3);
-//    listingRepository.save(listing27);
-//
-//
-//    Listing listing28 = new Listing("Java for Dummies", "Reference book",
-//            "Books", 12.00, customer6);
-//    listingRepository.save(listing28);
-//
-//
-//    Listing listing29 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 15.00, customer6);
-//    listingRepository.save(listing29);
-//
-//
-//    Listing listing30 = new Listing("cooker", "aga",
-//            "Kitchenware", 150.00, customer6);
-//    listingRepository.save(listing30);
-//
-//    Listing listing31 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 20.00, customer4);
-//    listingRepository.save(listing31);
-//
-//
-//    Listing listing32 = new Listing("cooker", "aga",
-//            "Kitchenware", 155.00, customer4);
-//    listingRepository.save(listing32);
-
-//    Listing listing33 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 105.00, customer7);
-//    listingRepository.save(listing33);
-//
-//
-//    Listing listing34= new Listing("cooker", "aga",
-//            "Kitchenware", 100.00, customer7);
-//    listingRepository.save(listing34);
-//
-//    Listing listing35 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 78.00, customer7);
-//    listingRepository.save(listing35);
-//
-//
-//    Listing listing36 = new Listing("cooker", "aga",
-//            "Kitchenware", 90.00, customer3);
-//    listingRepository.save(listing36);
-//
-//    Listing listing37 = new Listing("bike", "boneshaker",
-//            "Sports & Leisure", 55.00, customer3);
-//    listingRepository.save(listing37);
-//
-//
-//    Listing listing38= new Listing("Mixer", "Mulinex",
-//            "Kitchenware", 54.00, customer1);
-//    listingRepository.save(listing38);
-//
-//    Listing listing39 = new Listing("Scooter", "Zippy Flyer",
-//            "Sports & Leisure", 25.00, customer3);
-//    listingRepository.save(listing39);
-//
-//
-//    Listing listing40 = new Listing("cooker", "Hotpoint",
-//            "Kitchenware", 95.00, customer1);
-//    listingRepository.save(listing40);
-//
-//    Listing listing41 = new Listing("bike", "Mountain",
-//            "Sports & Leisure", 136.00, customer1);
-//    listingRepository.save(listing41);
-//
    }
 }
