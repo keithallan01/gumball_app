@@ -2,20 +2,22 @@ import React, { Component } from "react";
 import TopPicks from "../components/dashboardComponents/TopPicks";
 import PickOfTheDay from "../components/dashboardComponents/PickOfTheDay";
 import SearchBar from '../components/dashboardComponents/SearchBar';
-import CategoryContainer from '../components/dashboardComponents/CategoryComponent'
+import CategoryContainer from '../components/dashboardComponents/CategoryComponent';
+import ListingSearchContainer from '../components/listingComponets/ListingSearchComponent';
 
 class DashboardContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listings: []
+      listings: [],
+      matches: []
     };
   }
   render() {
     if (this.state.listings.length === 0) return null;
     return (
       <div>
-        <SearchBar />
+        <ListingSearchContainer handleListingSearch={this.handleListingSearch}/>
         <CategoryContainer />
         <TopPicks listings={this.state.listings} />
         <PickOfTheDay listings={this.state.listings}/>
@@ -28,6 +30,22 @@ class DashboardContainer extends Component {
     fetch("http://localhost:8080/listings/top")
       .then(res => res.json())
       .then(listings => this.setState({ listings: listings }));
+  }
+
+  handleListingSearch = data => {
+
+    let lowerCaseInput = data.toLowerCase();
+        for (let i = 0; i < this.state.listings.length; i++){
+        const listing = this.state.listings[i];
+        if ((listing.item.toLowerCase().includes(lowerCaseInput))
+        ||
+        (listing.description.toLowerCase().includes(lowerCaseInput))
+        ||
+        (listing.category.toLowerCase().includes(lowerCaseInput))){
+          this.state.matches.push(this.state.listings[i])
+        }
+      }
+    this.setState({ listings: this.state.matches});
   }
 
 }

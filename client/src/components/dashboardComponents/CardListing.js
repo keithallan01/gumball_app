@@ -4,9 +4,14 @@ import faker from "faker";
 const CardListing = props => {
 
   const listingDetail = props.listings.map((listing) => {
-    console.dir(listing.image)
+
+    const click = e => {
+      console.log(e.target.value);
+    }
+    
     return (
-      <div className="card-listing">
+      <div className="card-listing" onClick={click} value={listing.id}>
+      {/* http://localhost:8080/listings/{listings.id} */}
         <div>
           <img src={listing.image} alt="Card cap" />
         </div>
