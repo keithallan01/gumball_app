@@ -11,30 +11,30 @@ const CardListing = props => {
     const click = e => {
       console.log(e.target.value);
     }
-
+    
     return (
       <div className="card-listing" onClick={click} value={listing.id}>
       {/* http://localhost:8080/listings/{listings.id} */}
         <div>
-          <img src={faker.image.avatar()} alt="Card cap" onClick={() => click} value={listing.id} />
+          <img src={listing.image} alt="Card cap" />
         </div>
         <div className="card-detail">
           <h3>{listing.item}</h3>
-          <h5>{listing.description}</h5>
-          <div className="price-location">
-            <div className="price">
-              <h3>{`£${listing.askingPrice}`}</h3>
-            </div>
-            <div className="loction">
-              <h4>{listing.category}</h4>
-            </div>
-          </div>
+          <h4>{listing.category}</h4>
+          <h4>{`£${listing.askingPrice}`}</h4>
         </div>
+        <div className="card-description">
+            <h5>{listing.description}</h5>
+        </div>
+          {/* <div className="loction">
+            <div className="price">
+          </div>
+          </div> */}
       </div>
     );
   })
 
-  return(
+  return (
     <li>
       {listingDetail}
     </li>

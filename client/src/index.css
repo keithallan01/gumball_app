@@ -126,34 +126,61 @@ nav {
 
 .card-listing{
   display:flex;
-  padding: 10px;
+  flex-direction: row;
+  margin: 20px auto;
+  /* padding: 10px; */
   border: 1px solid #e4a24d;
   cursor: pointer;
 
 }
 
 .card-detail{
+  margin: 10px;
   padding-left: 40px;
-  width: 100%;
 }
 
-.price-location{
+.card-description {
+  margin: 20px 0 0 60px;
+}
+
+.card-detail h3{
+  /* margin-top: 20px; */
+  margin-bottom: 0;
+}
+
+.card-detail h4{
+  margin-top: 50px;
+}
+
+/* .price-location{
   display:flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding-top: 25px;
 
 }
 
 .loction{
-  margin: 0 auto;
+  margin: 0 600px 20px  0;
   height:100%;
   float: right;
+}
+
+.price-location h5 {
+  margin-right: 500px;
 }
 
 .price{
   float: left;
   display: block;
-}
+}  */
 /* ------------------------ Card top ---------------------------------*/
+
+img {
+  height: 190px;
+  width: 190px;
+  margin: 10px;
+}
 
 .categories ul{ 
   height: 120px;
