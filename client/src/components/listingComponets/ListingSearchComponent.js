@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CustomerSearchComponent extends React.Component
+class ListingSearchComponent extends React.Component
 {
 
     constructor(props) {
@@ -20,8 +20,10 @@ class CustomerSearchComponent extends React.Component
                 <input type="text" value={this.state.value} onChange={this.handleChange}/>
                 <button
                 className="btn-search"
-                onClick={() => this.props.handleCustomerSearch(this.state.value)
-                }
+                onClick={() => {this.props.handleListingSearch(this.state.value,
+                this.state.value = '')
+            }
+                } 
                 >
                 Search
               </button>
@@ -31,4 +33,4 @@ class CustomerSearchComponent extends React.Component
 }
 
    
-export default CustomerSearchComponent;
+export default ListingSearchComponent;
