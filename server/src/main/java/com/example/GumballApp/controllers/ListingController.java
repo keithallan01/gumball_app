@@ -37,8 +37,8 @@ public class ListingController {
     }
 
     @GetMapping(value = "/asking-price/{askingPrice}")
-    public List<Listing> findListingsByPrice(double price) {
-        return listingRepository.findListingsByPrice(price);
+    public List<Listing> findListingsByAskingPrice(@PathVariable double askingPrice) {
+        return listingRepository.findListingsByAskingPrice(askingPrice);
     }
 
     @GetMapping(value = "/top")
