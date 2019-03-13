@@ -20,11 +20,11 @@ public class ListingTest {
                 "0131-555-5656", "keithAllan@yahoo.com");
 
         listing1 = new Listing("bike", "boneshaker",
-                "Sports & Leisure", 35.00, customer1);
+                "Sports & Leisure", 35.00, "", customer1);
 
 
         listing2 = new Listing("cooker", "aga",
-                                   "Kitchenware", 100.00, customer1);
+                "Kitchenware", 100.00, "", customer1);
     }
 
     @Test
