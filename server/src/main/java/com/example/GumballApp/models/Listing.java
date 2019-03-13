@@ -28,19 +28,23 @@ public class Listing {
     @Value("${default.searchCounter")
     private long searchCounter;
 
+    @Column(name = "image")
+    private String image;
+
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
    private Customer customer;
 
 
     public Listing(String item, String description,
-                   String category, double askingPrice, Customer customer) {
-        this.item = item;
-        this.description = description;
+                   String category, double askingPrice, String image, Customer customer) {
+        this.item = item.toUpperCase();
+        this.description = description.toLowerCase();
         this.category = category;
         this.askingPrice = askingPrice;
         this.customer = customer;
         this.searchCounter = 0L;
+        this.image = image;
     }
     public Long getSearchCounter() {
         return searchCounter;
@@ -66,7 +70,7 @@ public class Listing {
     }
 
     public String getItem() {
-        return item.toUpperCase();
+        return item;
     }
 
     public void setItem(String item) {
@@ -74,7 +78,7 @@ public class Listing {
     }
 
     public String getDescription() {
-        return description;
+        return description.toLowerCase();
     }
 
     public void setDescription(String description) {
@@ -105,4 +109,11 @@ public class Listing {
         this.customer = customer;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }

@@ -34,6 +34,11 @@ public class ListingController {
         return listingRepository.findListingsByCategory(category);
     }
 
+    @GetMapping(value = "/asking-price/{askingPrice}")
+    public List<Listing> findListingsByAskingPrice(@PathVariable double askingPrice) {
+        return listingRepository.findListingsByAskingPrice(askingPrice);
+    }
+
     @GetMapping(value = "/top")
     public List<Listing> sortListingsOrderBySearchCounterDesc(){
         return listingRepository.sortListingsOrderBySearchCounterDesc();

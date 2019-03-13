@@ -1,12 +1,15 @@
 import React from "react";
 import ListingTable from "../components/listingComponets/ListingTable";
 import AddListingForm from '../components/listingComponets/AddListingForm';
+import ListingSearchContainer from '../components/listingComponets/ListingSearchComponent';
+
 class ListingContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       customers: [],
-      listings: []
+      listings: [],
+      matches: []
     };
   }
 
@@ -14,6 +17,7 @@ class ListingContainer extends React.Component {
     return (
       <div>
         <h1>Listing Container</h1>
+        <ListingSearchContainer handleListingSearch={this.handleListingSearch} />
         <AddListingForm 
         customersArr={this.state.customers}
         onListingSubmit={this.handleNewListingSubmit}
@@ -87,6 +91,22 @@ class ListingContainer extends React.Component {
     .catch(error => console.error("Error:", error));
 
   };
+
+  handleListingSearch = data => {
+
+    let lowerCaseInput = data.toLowerCase();
+        for (let i = 0; i < this.state.listings.length; i++){
+        const listing = this.state.listings[i];
+        if ((listing.item.toLowerCase().includes(lowerCaseInput))
+        ||
+        (listing.description.toLowerCase().includes(lowerCaseInput))
+        ||
+        (listing.category.toLowerCase().includes(lowerCaseInput))){
+          this.state.matches.push(this.state.listings[i])
+        }
+      }
+    this.setState({ listings: this.state.matches});
+  }
 }
 
 export default ListingContainer;

@@ -1,12 +1,14 @@
 import React from "react";
 import CustomerTable from "../components/customerComponents/CustomerTable";
 import AddCustomerForm from "../components/customerComponents/AddCustomerForm";
+import CustomerSearchComponent from "../components/customerComponents/CustomerSearchComponent";
 
 class CustomerContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       customers: [],
+      matches: []
     };
   }
 
@@ -14,6 +16,7 @@ class CustomerContainer extends React.Component {
     return (
       <div>
         <h1>Customers</h1>
+        <CustomerSearchComponent handleCustomerSearch={this.handleCustomerSearch}/>
         <AddCustomerForm
           onCustomerSubmit={this.handleNewCustomerSubmit}
         />
@@ -80,6 +83,29 @@ class CustomerContainer extends React.Component {
     .catch(error => console.error("Error:", error));
 
   };
+
+  handleCustomerSearch = data => {
+    let lowerCaseInput = data.toLowerCase();
+        for (let i = 0; i < this.state.customers.length; i++){
+        const customer = this.state.customers[i];
+        if ((customer.firstName.toLowerCase().includes(lowerCaseInput))
+        ||
+        (customer.lastName.toLowerCase().includes(lowerCaseInput))
+        ||
+        (customer.town.toLowerCase().includes(lowerCaseInput))
+        ||
+        (customer.address.toLowerCase().includes(lowerCaseInput))
+        ||
+        (customer.emailAddress.toLowerCase().includes(lowerCaseInput))
+        ||
+        (customer.telephoneNumber.toLowerCase().includes(lowerCaseInput))){
+          this.state.matches.push(this.state.customers[i])
+        }
+      }
+    this.setState({ customers: this.state.matches});
+  }
+
+
 
 }
 
