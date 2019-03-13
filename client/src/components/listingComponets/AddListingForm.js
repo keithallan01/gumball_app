@@ -42,7 +42,7 @@ const AddListingForm = props => {
     reader.onload = (e) => {
     const result = e.target.result
     console.log(result)
-    setNewListing({image: result})
+    setNewListing({...newListing, image: result})
     }
   }
 

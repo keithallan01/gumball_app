@@ -4,10 +4,6 @@ import faker from "faker";
 const CardListing = props => {
 
   const listingDetail = props.listings.map((listing) => {
-
-    console.dir(listing)
-
-
     const click = e => {
       console.log(e.target.value);
     }
