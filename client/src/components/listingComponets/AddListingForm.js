@@ -41,7 +41,7 @@ const AddListingForm = props => {
     reader.readAsDataURL(e.target.files[0]);
     reader.onload = (e) => {
     const result = e.target.result
-    console.log(result)
+    // console.log(result)
     setNewListing({...newListing, image: result})
     }
   }
@@ -50,6 +50,7 @@ const AddListingForm = props => {
   const handleSubmit = e => {
     e.preventDefault();
     props.onListingSubmit(newListing);
+    console.log(newListing)
     setOpen(false);
   };
 

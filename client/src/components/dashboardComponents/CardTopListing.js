@@ -1,6 +1,5 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import React, { useState } from "react";
-import faker from "faker";
 
 const CardTopListing = props => {
 
