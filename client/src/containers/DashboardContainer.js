@@ -18,9 +18,8 @@ class DashboardContainer extends Component {
     if (this.state.listings.length === 0) return null;
     return (
       <div>
-        <SearchBar />
-        <CategoryContainer onClickCategory={this.handleSearchByCategory}/>
         <ListingSearchContainer handleListingSearch={this.handleListingSearch}/>
+        <CategoryContainer onClickCategory={this.handleSearchByCategory}/>
         <TopPicks listings={this.state.listings} />
         <PickOfTheDay listings={this.state.listings} handleListingClick={this.handleListingClick}/>
       </div>

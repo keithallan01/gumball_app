@@ -15,8 +15,8 @@ class CustomerContainer extends React.Component {
   render() {
     return (
       <div>
-        <h1>Customers</h1>
         <CustomerSearchComponent handleCustomerSearch={this.handleCustomerSearch}/>
+        <h2>Customers</h2>
         <AddCustomerForm
           onCustomerSubmit={this.handleNewCustomerSubmit}
         />

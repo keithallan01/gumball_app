@@ -13,7 +13,9 @@ const CategoryComponent = (props) => {
         <li>
         <div className="categories-links" onClick={() => props.onClickCategory("Automotive")}>Automotive</div>
         </li>
+        <li>
         <div className="categories-links" onClick={() => props.onClickCategory("Books")}>Books</div>
+        </li>
         <li>
         <div className="categories-links" onClick={() => props.onClickCategory("Clothing")}>Clothing</div>
         </li>

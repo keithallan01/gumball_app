@@ -16,11 +16,13 @@ class ListingContainer extends React.Component {
   render() {
     return (
       <div>
-        <h1>Listing Container</h1>
-        <ListingSearchContainer handleListingSearch={this.handleListingSearch} />
-        <AddListingForm 
-        customersArr={this.state.customers}
-        onListingSubmit={this.handleNewListingSubmit}
+        <div>
+          <ListingSearchContainer handleListingSearch={this.handleListingSearch} />
+          <h2>Listings</h2>
+        </div>
+        <AddListingForm
+          customersArr={this.state.customers}
+          onListingSubmit={this.handleNewListingSubmit}
         />
         <ListingTable
           listingsArr={this.state.listings}
@@ -35,8 +37,8 @@ class ListingContainer extends React.Component {
     fetch("http://localhost:8080/customers")
       .then(res => res.json())
       .then(data => this.setState({ customers: data._embedded.customers }));
-        
-    
+
+
     fetch("http://localhost:8080/listings/top")
       .then(res => res.json())
       .then(listings => this.setState({ listings: listings }));
@@ -55,7 +57,7 @@ class ListingContainer extends React.Component {
       .then(response => fetch("http://localhost:8080/listings/top")
         .then(res => res.json())
         .then(listings => this.setState({ listings: listings })))
-        .catch(error => console.error("Error:", error));
+      .catch(error => console.error("Error:", error));
   };
 
   handleUpdateListing = (id, data) => {
@@ -66,10 +68,10 @@ class ListingContainer extends React.Component {
         "Content-Type": "application/json"
       }
     })
-    .then(res => res.json())
-    .then(response => fetch("http://localhost:8080/listings/top")
       .then(res => res.json())
-      .then(listings => this.setState({ listings: listings })))
+      .then(response => fetch("http://localhost:8080/listings/top")
+        .then(res => res.json())
+        .then(listings => this.setState({ listings: listings })))
       .catch(error => console.error("Error:", error));
   };
 
@@ -83,28 +85,28 @@ class ListingContainer extends React.Component {
         "Content-Type": "application/json"
       }
     })
-    .then(res => res.text())
-    .then(res => fetch("http://localhost:8080/listings/top")
-    .then(res => res.json())
-    .then(listings => this.setState({ listings: listings })))
-    .catch(error => console.error("Error:", error));
+      .then(res => res.text())
+      .then(res => fetch("http://localhost:8080/listings/top")
+        .then(res => res.json())
+        .then(listings => this.setState({ listings: listings })))
+      .catch(error => console.error("Error:", error));
 
   };
 
   handleListingSearch = data => {
 
     let lowerCaseInput = data.toLowerCase();
-        for (let i = 0; i < this.state.listings.length; i++){
-        const listing = this.state.listings[i];
-        if ((listing.item.toLowerCase().includes(lowerCaseInput))
+    for (let i = 0; i < this.state.listings.length; i++) {
+      const listing = this.state.listings[i];
+      if ((listing.item.toLowerCase().includes(lowerCaseInput))
         ||
         (listing.description.toLowerCase().includes(lowerCaseInput))
         ||
-        (listing.category.toLowerCase().includes(lowerCaseInput))){
-          this.state.matches.push(this.state.listings[i])
-        }
+        (listing.category.toLowerCase().includes(lowerCaseInput))) {
+        this.state.matches.push(this.state.listings[i])
       }
-    this.setState({ listings: this.state.matches});
+    }
+    this.setState({ listings: this.state.matches });
   }
 }
 

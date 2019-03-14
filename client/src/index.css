@@ -19,7 +19,7 @@ h3 {
 h1 {
   margin-top: 0;
   margin-bottom: 20px;
-  color: #fff;
+  color: black;
   font-size: 240%;
   word-spacing: 4px;
   letter-spacing: 1px;
@@ -264,8 +264,22 @@ form.search-form::after {
 
 .search-div{
   display: block;
-  margin-left: 18%;
-  margin-top: 3%;
+  margin-left: 45%;
+  /* margin-top: 3%; */
+  /* float: right; */
+}
+
+.search-div input{
+  /* border-radius: 8px; */
+  width: 80%;
+  /* font-size: 40px; */
+  height: 60px;
+}
+
+.btn-search {
+  /* border-radius: 8px; */
+  height: 60px;
+  width: 150px;
 }
 
 /* cf1717 */
@@ -275,3 +289,13 @@ form.search-form::after {
 .categories-links{
   cursor: pointer;
 }
+
+.categories-links ul{
+justify-content: space-evenly;
+}
+
+/* .listing-info.container {
+  margin: auto;
+  width: 5000px;
+} */
+
