@@ -16,10 +16,15 @@ const CardTopListing = props => {
           </div>
         </div>
         <Modal isOpen={open} toggle={() => setOpen(true)} className="top-listing">
-          <ModalHeader>Modal title</ModalHeader>
+          <ModalHeader>{listing.item}</ModalHeader>
           <ModalBody>
-            <b>Look at the top right of the page/viewport!</b><br />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <img src={listing.image}></img>
+            <h4>{listing.category}</h4>
+            <h5>{listing.description}</h5>
+            <h3>{`£${listing.askingPrice}`}</h3>
+            <h4>Contact Customer:</h4>
+            <h3>{listing.customer.telephoneNumber}</h3>
+            <h3>{listing.customer.emailAddress}</h3>
           </ModalBody>
           <ModalFooter>
             <Button color="secondary" onClick={() => setOpen(false)}>Cancel</Button>
